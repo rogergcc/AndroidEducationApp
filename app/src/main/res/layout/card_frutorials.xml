@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="1dp"
+        card_view:cardCornerRadius="7dp"
+        card_view:cardBackgroundColor="@color/whiteBodyColor"
+        card_view:cardPreventCornerOverlap="false"
+        android:layout_margin="@dimen/card_margin">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/youtubeThubnail"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/frutorials"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/youtubeThubnail"
+                android:textColor="@color/frutorial_title"
+                android:layout_margin="5dp"
+                android:text="Sample"
+                android:textSize="@dimen/frutorial_title" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_play"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/youtubeThubnail"
+                android:layout_marginTop="-40dp"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

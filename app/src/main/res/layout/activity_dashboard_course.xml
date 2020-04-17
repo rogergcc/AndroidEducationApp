@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020. rogergcc
+  -->
+
+<android.support.v4.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#ffba60"
+    tools:context=".DashboardCourseActivity">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffba60"
+
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingLeft="@dimen/horizontal_dashboard"
+            android:paddingTop="@dimen/fab_margin"
+            android:paddingRight="@dimen/horizontal_dashboard"
+
+
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="40"
+                android:fontFamily="@font/bariol_bold"
+                android:text="Hey, What would you like to learn today ?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp">
+
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:src="@drawable/refer_icon">
+
+            </ImageView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/horizontal_dashboard"
+
+            android:layout_marginTop="@dimen/normalPadding"
+            android:layout_marginRight="@dimen/horizontal_dashboard"
+
+            android:background="@drawable/container_search"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+
+            android:drawablePadding="@dimen/drawable_left"
+            android:fontFamily="@font/bariol_regular"
+
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingTop="@dimen/vertical_search"
+            android:paddingRight="@dimen/normalPadding"
+            android:paddingBottom="@dimen/vertical_search"
+
+            android:text="Search Here"
+            android:textColor="@color/bottomNavigationTextColor"
+
+            android:textSize="14sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="80dp"
+                    android:background="@color/back_courses"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_firstcoureses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/horizontal_dashboard"
+                        android:layout_marginTop="@dimen/normalPadding"
+                        android:layout_marginRight="@dimen/horizontal_dashboard"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.v7.widget.CardView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/horizontal_card"
+                            android:layout_marginEnd="@dimen/horizontal_card"
+                            android:layout_marginRight="@dimen/horizontal_card"
+                            android:layout_marginBottom="@dimen/horizontal_card"
+
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+
+                            android:foreground="?attr/selectableItemBackground"
+
+
+                            app:cardCornerRadius="@dimen/card_radius"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/card_view_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/img_card_height"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/course_design_thinking" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="Design Thinking"
+                                    android:textColor="@color/darkTextColor"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginBottom="@dimen/normalPadding"
+
+                                    android:fontFamily="@font/bariol_bold"
+
+                                    android:text="19 courses"
+                                    android:textColor="@color/dashboard_subtitle"
+                                    android:textSize="11sp" />
+
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/horizontal_card"
+                            android:layout_marginTop="@dimen/horizontal_card"
+                            android:layout_marginBottom="@dimen/horizontal_card"
+
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardCornerRadius="@dimen/card_radius"
+                            app:cardElevation="@dimen/card_course_dashboard_elevation">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="@dimen/img_card_height"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/course_design_coding" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="Coding"
+                                    android:textColor="@color/darkTextColor"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginBottom="@dimen/normalPadding"
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="21 courses"
+                                    android:textColor="@color/dashboard_subtitle"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_secondcoureses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/horizontal_dashboard"
+                        android:layout_marginTop="@dimen/normalPadding"
+                        android:layout_marginRight="@dimen/horizontal_dashboard"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <android.support.v7.widget.CardView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/horizontal_card"
+                            android:layout_marginRight="@dimen/horizontal_card"
+                            android:layout_marginBottom="@dimen/horizontal_card"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+
+                            android:foreground="?attr/selectableItemBackground"
+
+
+                            app:cardCornerRadius="@dimen/card_radius"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/img_card_height"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/course_design_marketing" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="Marketing"
+                                    android:textColor="@color/darkTextColor"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginBottom="@dimen/normalPadding"
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="19 courses"
+                                    android:textColor="@color/dashboard_subtitle"
+                                    android:textSize="11sp" />
+
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/horizontal_card"
+                            android:layout_marginTop="@dimen/horizontal_card"
+                            android:layout_marginBottom="@dimen/horizontal_card"
+
+
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardCornerRadius="@dimen/card_radius"
+                            app:cardElevation="@dimen/card_course_dashboard_elevation">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="@dimen/img_card_height"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/course_design_securityexpert" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="Security Expert"
+                                    android:textColor="@color/darkTextColor"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginBottom="@dimen/normalPadding"
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="21 courses"
+                                    android:textColor="@color/dashboard_subtitle"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/horizontal_dashboard"
+                        android:layout_marginTop="@dimen/normalPadding"
+                        android:layout_marginRight="@dimen/horizontal_dashboard"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <android.support.v7.widget.CardView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/horizontal_card"
+                            android:layout_marginRight="@dimen/horizontal_card"
+                            android:layout_marginBottom="@dimen/horizontal_card"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+
+                            android:foreground="?attr/selectableItemBackground"
+
+
+                            app:cardCornerRadius="@dimen/card_radius"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/img_card_height"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/course_design_whatisthisshit" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="Places"
+                                    android:textColor="@color/darkTextColor"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginBottom="@dimen/normalPadding"
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="19 courses"
+                                    android:textColor="@color/dashboard_subtitle"
+                                    android:textSize="11sp" />
+
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/horizontal_card"
+                            android:layout_marginTop="@dimen/horizontal_card"
+                            android:layout_marginBottom="@dimen/horizontal_card"
+
+
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardCornerRadius="@dimen/card_radius"
+                            app:cardElevation="@dimen/card_course_dashboard_elevation">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="@dimen/img_card_height"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/course_design_coding" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="Locations"
+                                    android:textColor="@color/darkTextColor"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normalPadding"
+                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginBottom="@dimen/normalPadding"
+
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:text="21 courses"
+                                    android:textColor="@color/dashboard_subtitle"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
