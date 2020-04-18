@@ -1,6 +1,6 @@
 # education
  Android Education App adding Design Course App UI
- 
+ original design https://dribbble.com/shots/6482664-Design-Course-App-UI
   ## 📸 Screenshots
 
 **Click the image below to enlarge.**
