@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity
                     return true;
                 case R.id.navigationMyCourses:
                     //https://dribbble.com/shots/6482664-Design-Course-App-UI
-                    Intent intentGetStarted = new Intent(MainActivity.this, DashboardCourseActivity.class);
+                    Intent intentGetStarted = new Intent(MainActivity.this, CourseStaggedActivity.class);
                     startActivity(intentGetStarted);
                     return true;
                 case R.id.navigationHome:

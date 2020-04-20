@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020. rogergcc
+  -->
+
+<android.support.v7.widget.CardView
+    android:id="@+id/card_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+
+    android:layout_marginRight="@dimen/horizontal_card"
+    android:layout_marginBottom="@dimen/staggedmarginbottom"
+
+
+
+    android:clickable="true"
+    android:focusable="true"
+
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white"
+
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation=".1dp"
+    app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/card_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_card_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/course_design_thinking" />
+
+        <TextView
+            android:id="@+id/stag_item_course"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/normalPadding"
+            android:layout_marginTop="@dimen/top_text_card"
+
+            android:layout_marginRight="@dimen/normalPadding"
+
+
+            android:fontFamily="@font/bariol_bold"
+            android:text="Design Thinking"
+            android:textColor="@color/darkTextColor"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/stag_item_quantity_course"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/normalPadding"
+            android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+            android:layout_marginRight="@dimen/normalPadding"
+            android:layout_marginBottom="@dimen/normalPadding"
+
+            android:fontFamily="@font/bariol_bold"
+
+            android:text="19 courses"
+            android:textColor="@color/dashboard_subtitle"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
