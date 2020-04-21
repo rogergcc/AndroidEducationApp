@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020. rogergcc
+  -->
+
+<android.support.v4.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#ffba60"
+    tools:context=".CourseStaggedActivity">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffba60"
+
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingLeft="@dimen/horizontal_dashboard"
+            android:paddingTop="@dimen/fab_margin"
+            android:paddingRight="@dimen/horizontal_dashboard"
+
+
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="40"
+                android:fontFamily="@font/bariol_bold"
+                android:text="Hey, What would you like to learn today ?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp">
+
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:src="@drawable/refer_icon">
+
+            </ImageView>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"
+
+            android:maxLines="1"
+            android:singleLine="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/horizontal_dashboard"
+
+            android:layout_marginTop="@dimen/normalPadding"
+            android:layout_marginRight="@dimen/horizontal_dashboard"
+
+            android:background="@drawable/container_search"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+
+            android:drawablePadding="@dimen/drawable_left"
+            android:fontFamily="@font/bariol_regular"
+
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingTop="@dimen/vertical_search"
+            android:paddingRight="@dimen/normalPadding"
+            android:paddingBottom="@dimen/vertical_search"
+
+            android:hint="Search Here"
+            android:textColorHint="@color/bottom_navigation_color"
+            android:textColor="@color/contentTextColor"
+
+            android:textSize="14sp">
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="80dp"
+                    android:background="@color/back_courses"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/horizontal_card"
+                    android:layout_marginBottom="@dimen/horizontal_card"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_courses"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="@dimen/horizontal_dashboard"
+                        android:layout_marginTop="@dimen/normalPadding"
+                        android:layout_marginRight="@dimen/horizontal_dashboard"
+                        >
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

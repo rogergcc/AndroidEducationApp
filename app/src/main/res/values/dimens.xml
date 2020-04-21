@@ -20,6 +20,7 @@
 
     <!--    Dashboard-->
     <dimen name="normalPadding">20dp</dimen>
+    <dimen name="staggedmarginbottom">21dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="horizontal_dashboard">32dp</dimen>
     <dimen name="img_card_height">120dp</dimen>
