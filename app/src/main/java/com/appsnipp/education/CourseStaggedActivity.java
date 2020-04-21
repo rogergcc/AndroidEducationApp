@@ -4,14 +4,20 @@
 
 package com.appsnipp.education;
 
+import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appsnipp.education.adapter.CourseRecyclerAdapter;
@@ -26,6 +32,7 @@ public class CourseStaggedActivity extends AppCompatActivity
     private CourseRecyclerAdapter adapter;
     private RecyclerView recyclerView;
     private List<CourseCard> courseCards;
+    private EditText edt_search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +40,28 @@ public class CourseStaggedActivity extends AppCompatActivity
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_course_stagged);
+
+
+
+        edt_search = findViewById(R.id.edt_search);
+        edt_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+
+                    //For this example only use seach option
+                    //U can use a other view with activityresult
+                    performSearch();
+
+                    Toast.makeText(CourseStaggedActivity.this,
+                            "Edt Searching Click: " + edt_search.getText().toString().trim(),
+                            Toast.LENGTH_SHORT).show();
+
+                    return true;
+                }
+                return false;
+            }
+        });
 
         recyclerView = findViewById(R.id.rv_courses);
 
@@ -62,6 +91,13 @@ public class CourseStaggedActivity extends AppCompatActivity
     }
 
 
+    private void performSearch() {
+        edt_search.clearFocus();
+        InputMethodManager in = (InputMethodManager) CourseStaggedActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        in.hideSoftInputFromWindow(edt_search.getWindowToken(), 0);
+        //...perform search
+
+    }
     @Override
     public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
 

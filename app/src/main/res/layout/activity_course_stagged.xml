@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
 
     android:background="#ffba60"
-    tools:context=".DashboardCourseActivity">
+    tools:context=".CourseStaggedActivity">
 
 
     <LinearLayout
@@ -59,7 +59,15 @@
             </ImageView>
         </LinearLayout>
 
-        <TextView
+        <EditText
+            android:id="@+id/edt_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"
+
+            android:maxLines="1"
+            android:singleLine="true"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -82,12 +90,13 @@
             android:paddingRight="@dimen/normalPadding"
             android:paddingBottom="@dimen/vertical_search"
 
-            android:text="Search Here"
-            android:textColor="@color/bottomNavigationTextColor"
+            android:hint="Search Here"
+            android:textColorHint="@color/bottom_navigation_color"
+            android:textColor="@color/contentTextColor"
 
             android:textSize="14sp">
 
-        </TextView>
+        </EditText>
 
         <LinearLayout
             android:layout_width="match_parent"
