@@ -2,7 +2,7 @@
   ~ Copyright (c) 2020. rogergcc
   -->
 
-<android.support.v4.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -125,7 +125,7 @@
                     android:layout_marginBottom="@dimen/horizontal_card"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_courses"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -135,7 +135,7 @@
                         android:layout_marginRight="@dimen/horizontal_dashboard"
                         >
 
-                    </android.support.v7.widget.RecyclerView>
+                    </androidx.recyclerview.widget.RecyclerView>
 
                 </LinearLayout>
             </RelativeLayout>
@@ -143,4 +143,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

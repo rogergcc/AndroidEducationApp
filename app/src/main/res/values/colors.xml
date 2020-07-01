@@ -29,4 +29,25 @@
     <color name="color4">#EEBE5C</color>
     <color name="color5">#8778E9</color>
     <color name="back_courses">#f8fafb</color>
+
+<!--    colors play game-->
+    <color name="black_transparent">#CC003366</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#D32F2F</color>
+    <color name="grey">#CFCFCF</color>
+    <color name="orange">#FE940D</color>
+    <color name="green">#00FF00</color>
+    <color name="dark_blue">#5d3369</color>
+
+    <color name="grey_light">#59CFCFCF</color>
+    <color name="red_light">#33D32F2F</color>
+
+    <color name="nav_bar_color">#33CFCFCF</color>
+
+    <color name="option1">#503FEF</color>
+    <color name="option2">#A919DD</color>
+    <color name="option3">#E34B4A</color>
+    <color name="option4">#FF8033</color>
+
 </resources>
