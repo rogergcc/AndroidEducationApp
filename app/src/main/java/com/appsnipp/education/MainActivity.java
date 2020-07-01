@@ -2,17 +2,17 @@ package com.appsnipp.education;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.navigation.NavigationView;
+import androidx.fragment.app.Fragment;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
@@ -27,19 +27,23 @@ public class MainActivity extends AppCompatActivity
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
+            Intent intentGetStarted;
             switch (item.getItemId()) {
                 case R.id.navigationMyProfile:
 
                     return true;
                 case R.id.navigationMyCourses:
                     //https://dribbble.com/shots/6482664-Design-Course-App-UI
-                    Intent intentGetStarted = new Intent(MainActivity.this, CourseStaggedActivity.class);
+                    intentGetStarted = new Intent(MainActivity.this, CourseStaggedActivity.class);
                     startActivity(intentGetStarted);
                     return true;
                 case R.id.navigationHome:
+
                     return true;
-                case R.id.navigationSearch:
-                    return true;
+//                case R.id.navigationSearch:
+//                    intentGetStarted = new Intent(MainActivity.this, GamePlayActivity.class);
+//                    startActivity(intentGetStarted);
+//                    return true;
                 case R.id.navigationMenu:
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                     drawer.openDrawer(GravityCompat.START);
