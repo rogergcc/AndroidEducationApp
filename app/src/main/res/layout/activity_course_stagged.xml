@@ -79,7 +79,7 @@
             android:background="@drawable/container_search"
             android:drawableStart="@drawable/ic_search_black_24dp"
 
-            android:drawableLeft="@drawable/ic_search_black_24dp"
+
 
             android:drawablePadding="@dimen/drawable_left"
             android:fontFamily="@font/bariol_regular"
@@ -91,8 +91,8 @@
             android:paddingBottom="@dimen/vertical_search"
 
             android:hint="Search Here"
-            android:textColorHint="@color/bottom_navigation_color"
-            android:textColor="@color/contentTextColor"
+            android:textColorHint="@color/frutorial_title"
+            android:textColor="@color/colorPrimaryDark"
 
             android:textSize="14sp">
 

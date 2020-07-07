@@ -31,25 +31,28 @@ public class MainActivity extends AppCompatActivity
             switch (item.getItemId()) {
                 case R.id.navigationMyProfile:
 
-                    return true;
+//                    return true;
+                    break;
                 case R.id.navigationMyCourses:
                     //https://dribbble.com/shots/6482664-Design-Course-App-UI
                     intentGetStarted = new Intent(MainActivity.this, CourseStaggedActivity.class);
                     startActivity(intentGetStarted);
-                    return true;
+
+                    break;
                 case R.id.navigationHome:
 
-                    return true;
-//                case R.id.navigationSearch:
+                    break;
+                case R.id.navigationSearch:
 //                    intentGetStarted = new Intent(MainActivity.this, GamePlayActivity.class);
 //                    startActivity(intentGetStarted);
-//                    return true;
+                    break;
                 case R.id.navigationMenu:
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                     drawer.openDrawer(GravityCompat.START);
-                    return true;
+                    break;
             }
-            return false;
+//            return false;
+            return true;
         }
     };
 
