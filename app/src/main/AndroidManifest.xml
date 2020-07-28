@@ -9,20 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".matchcourses.MatchesCoursesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
 
-<!--        <activity-->
-<!--            android:screenOrientation="portrait"-->
-<!--            android:theme="@style/AppTheme.NoActionBar"-->
-<!--            android:name=".GamePlayActivity">-->
-
-<!--        </activity>-->
-
+        </activity>
+        <!-- <activity -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" -->
+        <!-- android:name=".GamePlayActivity"> -->
+        <!-- </activity> -->
         <activity
             android:name=".CourseStaggedActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan"></activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".DashboardCourseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

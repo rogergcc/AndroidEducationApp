@@ -2,18 +2,21 @@ package com.appsnipp.education;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.navigation.NavigationView;
-import androidx.fragment.app.Fragment;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
-import android.view.MenuItem;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+
+import com.appsnipp.education.matchcourses.MatchesCoursesActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,11 +43,14 @@ public class MainActivity extends AppCompatActivity
 
                     break;
                 case R.id.navigationHome:
-
+//                    intentGetStarted = new Intent(MainActivity.this, MatchesCoursesActivity.class);
+//                    startActivity(intentGetStarted);
                     break;
                 case R.id.navigationSearch:
 //                    intentGetStarted = new Intent(MainActivity.this, GamePlayActivity.class);
 //                    startActivity(intentGetStarted);
+                    intentGetStarted = new Intent(MainActivity.this, MatchesCoursesActivity.class);
+                    startActivity(intentGetStarted);
                     break;
                 case R.id.navigationMenu:
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
