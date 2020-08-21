@@ -44,7 +44,7 @@
 
         <View
             android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:background="@color/grey_light"
+            android:background="@color/nav_bar_color"
             android:layout_width="match_parent"
             android:layout_height="1dp" />
     </LinearLayout>
