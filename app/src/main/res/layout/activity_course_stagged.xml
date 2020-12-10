@@ -129,6 +129,10 @@
                         android:id="@+id/rv_courses"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        tools:listitem="@layout/item_card"
+                        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                        tools:itemCount="7"
+                        app:spanCount="2"
 
                         android:layout_marginLeft="@dimen/horizontal_dashboard"
                         android:layout_marginTop="@dimen/normalPadding"

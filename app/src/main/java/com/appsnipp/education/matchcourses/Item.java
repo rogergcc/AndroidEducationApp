@@ -5,6 +5,15 @@ package com.appsnipp.education.matchcourses;
  */
 
 public class Item {
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price='" + price + '\'' +
+                ", image=" + image +
+                '}';
+    }
 
     private final int id;
     private final String name;

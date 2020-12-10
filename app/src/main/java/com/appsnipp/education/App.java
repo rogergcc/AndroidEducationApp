@@ -2,6 +2,8 @@ package com.appsnipp.education;
 
 import android.app.Application;
 
+import com.appsnipp.education.helpers.DiscreteScrollViewOptions;
+
 /**
  * Created by yarolegovich on 08.03.2017.
  */

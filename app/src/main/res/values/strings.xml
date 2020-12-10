@@ -7,4 +7,12 @@
     <string name="action_settings">Settings</string>
 
     <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_title_import">Import</string>
+    <string name="nav_title_gallery">Gallery</string>
+    <string name="nav_title_slideshow">Slideshow</string>
+    <string name="nav_title_tools">Tools</string>
+    <string name="nav_title_share">Share</string>
+    <string name="nav_title_toggle_theme">Toggle Theme</string>
 </resources>

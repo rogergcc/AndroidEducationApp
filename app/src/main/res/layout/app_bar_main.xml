@@ -21,10 +21,24 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+<!--    <include layout="@layout/content_main" />-->
+<!--        old method with frame-->
+        <FrameLayout
+            android:id="@+id/container_frame"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+<!--        <fragment-->
+<!--            android:id="@+id/container_frame"-->
+<!--            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--        </fragment>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

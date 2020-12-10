@@ -3,26 +3,35 @@ package com.appsnipp.education;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.appsnipp.education.matchcourses.MatchesCoursesActivity;
+
+import com.appsnipp.education.databinding.ActivityMainBinding;
+import com.appsnipp.education.fragments.CoursesStaggedFragment;
+import com.appsnipp.education.fragments.HomeCoursesFragment;
+import com.appsnipp.education.fragments.MatchesCoursesFragment;
+import com.appsnipp.education.helpers.BottomNavigationBehavior;
+import com.appsnipp.education.helpers.DarkModePrefManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private BottomNavigationView bottomNavigationView;
+    //private BottomNavigationView bottomNavigationView;
 
+
+    ActivityMainBinding binding;
+//    NavHostFragment navHostFragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,34 +39,36 @@ public class MainActivity extends AppCompatActivity
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
+            Fragment fragmentoGenerico = null;
             Intent intentGetStarted;
             switch (item.getItemId()) {
                 case R.id.navigationMyProfile:
-
 //                    return true;
                     break;
                 case R.id.navigationMyCourses:
                     //https://dribbble.com/shots/6482664-Design-Course-App-UI
-                    intentGetStarted = new Intent(MainActivity.this, CourseStaggedActivity.class);
-                    startActivity(intentGetStarted);
-
+                    fragmentoGenerico = new CoursesStaggedFragment();
                     break;
                 case R.id.navigationHome:
-//                    intentGetStarted = new Intent(MainActivity.this, MatchesCoursesActivity.class);
-//                    startActivity(intentGetStarted);
+                    fragmentoGenerico = new HomeCoursesFragment();
                     break;
                 case R.id.navigationSearch:
-//                    intentGetStarted = new Intent(MainActivity.this, GamePlayActivity.class);
-//                    startActivity(intentGetStarted);
-                    intentGetStarted = new Intent(MainActivity.this, MatchesCoursesActivity.class);
-                    startActivity(intentGetStarted);
+
+                    fragmentoGenerico = new MatchesCoursesFragment();
                     break;
                 case R.id.navigationMenu:
-                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                    drawer.openDrawer(GravityCompat.START);
+                    binding.drawerLayout.openDrawer(GravityCompat.START);
                     break;
             }
-//            return false;
+            if (fragmentoGenerico != null) {
+//                fragmentManager
+//                        .beginTransaction()
+//                        .replace(R.id.container, fragmentoGenerico)
+//                        .commit();
+                loadFragment(fragmentoGenerico);
+            }
+
+            setTitle(item.getTitle());
             return true;
         }
     };
@@ -70,35 +81,61 @@ public class MainActivity extends AppCompatActivity
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
 
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+
+        View view = binding.getRoot();
+        setContentView(view);
+
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(binding.appBarMain.toolbar);
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
+                this, binding.drawerLayout, binding.appBarMain.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        binding.navView.setNavigationItemSelectedListener(this);
 
-        bottomNavigationView = findViewById(R.id.navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-//
-        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) bottomNavigationView.getLayoutParams();
+        //region REGION OLD METHOD BOTTOM NAVIGATION
+        binding.appBarMain.bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) binding.appBarMain.bottomNavigation.getLayoutParams();
         layoutParams.setBehavior(new BottomNavigationBehavior());
+        binding.appBarMain.bottomNavigation.setSelectedItemId(R.id.navigationHome);
+        //endregion
 
-        bottomNavigationView.setSelectedItemId(R.id.navigationHome);
+        //setupNavigation();
+
+    }
+
+//    private void setupNavigation() {
+//        navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+//        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+//        NavigationUI.setupWithNavController(bottomNavigationView, navHostFragment.getNavController());
+//    }
+
+    private void loadFragment(Fragment fragment) {
+        // load fragment
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(
+                R.anim.fragment_fade_enter,  // enter
+                R.anim.fragment_fade_exit,  // exit
+                R.anim.fragment_fade_enter,   // popEnter
+                R.anim.fragment_fade_exit  // popExit
+        );
+
+        transaction.replace(R.id.container_frame, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
 
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -131,8 +168,8 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        binding.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 }

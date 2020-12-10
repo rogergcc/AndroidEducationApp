@@ -1,4 +1,8 @@
-package com.appsnipp.education;
+/*
+ * Copyright (c) 2020. rogergcc
+ */
+
+package com.appsnipp.education.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,6 +14,8 @@ import android.view.View;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.appsnipp.education.App;
+import com.appsnipp.education.R;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 

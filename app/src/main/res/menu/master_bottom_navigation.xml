@@ -3,6 +3,7 @@
 
     <item
         android:id="@+id/navigationMenu"
+        android:visible="false"
         android:icon="@android:drawable/ic_menu_sort_by_size"
         android:title="Menu" />
 
@@ -23,7 +24,7 @@
 
     <item
         android:id="@+id/navigationMyProfile"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_user_icon"
         android:title="User" />
 
 </menu>

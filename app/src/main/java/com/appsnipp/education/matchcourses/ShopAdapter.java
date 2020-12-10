@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.appsnipp.education.R;
+import com.appsnipp.education.fragments.ItemDataClickListener;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -20,10 +21,11 @@ import java.util.List;
 
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
-    private List<Item> data;
-
-    public ShopAdapter(List<Item> data) {
-        this.data = data;
+    private List<Item> mData;
+    private ItemDataClickListener itemDataClickListener;
+    public ShopAdapter(List<Item> mData, ItemDataClickListener listener) {
+        this.mData = mData;
+        this.itemDataClickListener = listener;
     }
 
     @NonNull
@@ -36,7 +38,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Item itemDatos = data.get(position);
+        Item itemDatos = mData.get(position);
 
         holder.tv_titulo.setText(itemDatos.getName());
         holder.tv_cantidad_cursos.setText(itemDatos.getPrice());
@@ -46,14 +48,21 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 //                .transform(new CenterCrop(), new RoundedCorners(24))
 //                .transform(new RoundedCorners(40))
                 .into(holder.image);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemDataClickListener.onScrollPagerItemClick(itemDatos, holder.image);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return mData.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView image;
         private TextView tv_titulo;

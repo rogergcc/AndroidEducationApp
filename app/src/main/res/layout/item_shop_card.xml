@@ -4,7 +4,9 @@
 
 <!--    app:cardPreventCornerOverlap="true"-->
 <!--    app:cardUseCompatPadding="true"-->
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardViewCourse"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="160dp"
@@ -14,7 +16,7 @@
     android:clickable="true"
     android:focusable="true"
     app:cardCornerRadius="15dp"
-
+    app:cardBackgroundColor="@color/bottomNavigationBackground"
     app:cardPreventCornerOverlap="true">
 
 
@@ -47,7 +49,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Mobile"
             android:fontFamily="@font/calibri"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/contentTextColor" />
 
         <TextView
             android:id="@+id/tv_cantidad_cursos"
@@ -57,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="X cursos"
-            android:textColor="@color/frutorial_title"
+            android:textColor="@color/contentTextColor"
             android:textSize="13sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

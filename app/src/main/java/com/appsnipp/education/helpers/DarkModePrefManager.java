@@ -1,4 +1,8 @@
-package com.appsnipp.education;
+/*
+ * Copyright (c) 2020. rogergcc
+ */
+
+package com.appsnipp.education.helpers;
 
 /**
  * Created by kapil on 20/01/17.
