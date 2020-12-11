@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020. rogergcc
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeCoursesFragment">
+
+    <fragment
+        android:id="@+id/homeCoursesFragment"
+        android:name="com.appsnipp.education.ui.fragments.HomeCoursesFragment"
+        android:label="fragment_home_courses"
+        tools:layout="@layout/fragment_home_courses" />
+    <fragment
+        android:id="@+id/coursesStaggedFragment"
+        android:name="com.appsnipp.education.ui.fragments.CoursesStaggedFragment"
+        android:label="fragment_courses_stagged"
+        tools:layout="@layout/fragment_courses_stagged" />
+    <fragment
+        android:id="@+id/matchesCoursesFragment"
+        android:name="com.appsnipp.education.ui.fragments.MatchesCoursesFragment"
+        android:label="fragment_matches_courses"
+        tools:layout="@layout/fragment_matches_courses" />
+</navigation>

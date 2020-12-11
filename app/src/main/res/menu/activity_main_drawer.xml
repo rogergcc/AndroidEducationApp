@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
 
     >
 
@@ -23,14 +22,13 @@
             android:title="@string/nav_title_tools" />
     </group>
 
-    <item
-        android:title="@string/nav_title_toggle_theme">
+    <item android:title="@string/nav_title_toggle_theme">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:visible="false"
-                android:title="@string/nav_title_share" />
+                android:title="@string/nav_title_share"
+                android:visible="false" />
             <item
                 android:id="@+id/nav_dark_mode"
                 android:icon="@android:drawable/ic_menu_day"

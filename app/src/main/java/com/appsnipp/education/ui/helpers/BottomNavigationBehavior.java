@@ -10,6 +10,7 @@ package com.appsnipp.education.ui.helpers;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -17,6 +18,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class BottomNavigationBehavior extends CoordinatorLayout.Behavior<BottomNavigationView> {
 
@@ -31,7 +33,22 @@ public class BottomNavigationBehavior extends CoordinatorLayout.Behavior<BottomN
     @Override
     public boolean layoutDependsOn(CoordinatorLayout parent, BottomNavigationView child, View dependency) {
         boolean dependsOn = dependency instanceof FrameLayout;
+//        if(dependency instanceof Snackbar.SnackbarLayout) {
+//            updateSnackbar(child, (Snackbar.SnackbarLayout)dependency);
+//        }
+
         return dependsOn;
+    }
+
+    private void updateSnackbar(View child, Snackbar.SnackbarLayout snackbarLayout) {
+        if(snackbarLayout.getLayoutParams() instanceof CoordinatorLayout.LayoutParams) {
+            CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams)snackbarLayout.getLayoutParams();
+
+            params.setAnchorId(child.getId());
+            params.anchorGravity = Gravity.TOP;
+            params.gravity = Gravity.TOP;
+            snackbarLayout.setLayoutParams(params);
+        }
     }
 
     @Override
