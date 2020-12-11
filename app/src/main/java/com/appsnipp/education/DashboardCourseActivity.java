@@ -4,13 +4,14 @@
 
 package com.appsnipp.education;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.WindowManager;
 
-import com.appsnipp.education.adapter.CourseRecyclerAdapter;
-import com.appsnipp.education.model.CourseCard;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.appsnipp.education.ui.adapter.CourseRecyclerAdapter;
+import com.appsnipp.education.ui.model.CourseCard;
 
 import java.util.List;
 
@@ -25,7 +26,6 @@ public class DashboardCourseActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_dashboard_course);
-
 
 
     }

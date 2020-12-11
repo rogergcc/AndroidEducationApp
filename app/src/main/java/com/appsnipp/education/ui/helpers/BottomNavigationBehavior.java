@@ -2,19 +2,21 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.helpers;
+package com.appsnipp.education.ui.helpers;
 
 /**
  * Created by kapil on 05/10/18.
  */
 
 import android.content.Context;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BottomNavigationBehavior extends CoordinatorLayout.Behavior<BottomNavigationView> {
 

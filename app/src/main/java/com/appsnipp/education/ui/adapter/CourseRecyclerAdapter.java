@@ -2,20 +2,22 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.adapter;
+package com.appsnipp.education.ui.adapter;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.appsnipp.education.R;
-import com.appsnipp.education.model.CourseCard;
+import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
+import com.appsnipp.education.ui.model.CourseCard;
 
 import java.util.List;
 

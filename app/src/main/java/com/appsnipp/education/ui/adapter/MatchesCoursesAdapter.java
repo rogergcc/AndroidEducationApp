@@ -1,4 +1,8 @@
-package com.appsnipp.education.matchcourses;
+/*
+ * Copyright (c) 2020. rogergcc
+ */
+
+package com.appsnipp.education.ui.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,22 +14,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.appsnipp.education.R;
-import com.appsnipp.education.fragments.ItemDataClickListener;
+import com.appsnipp.education.ui.listeners.MatchCourseClickListener;
+import com.appsnipp.education.ui.model.MatchCourse;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-/**
- * Created by yarolegovich on 07.03.2017.
- */
 
-public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
+public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAdapter.ViewHolder> {
 
-    private List<Item> mData;
-    private ItemDataClickListener itemDataClickListener;
-    public ShopAdapter(List<Item> mData, ItemDataClickListener listener) {
+    private List<MatchCourse> mData;
+    private MatchCourseClickListener matchCourseClickListener;
+    public MatchesCoursesAdapter(List<MatchCourse> mData, MatchCourseClickListener listener) {
         this.mData = mData;
-        this.itemDataClickListener = listener;
+        this.matchCourseClickListener = listener;
     }
 
     @NonNull
@@ -38,13 +40,13 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Item itemDatos = mData.get(position);
+        MatchCourse matchCourseDatos = mData.get(position);
 
-        holder.tv_titulo.setText(itemDatos.getName());
-        holder.tv_cantidad_cursos.setText(itemDatos.getPrice());
+        holder.tv_titulo.setText(matchCourseDatos.getName());
+        holder.tv_cantidad_cursos.setText(matchCourseDatos.getNumberOfCourses());
 
         Glide.with(holder.itemView.getContext())
-                .load(itemDatos.getImage())
+                .load(matchCourseDatos.getImageResource())
 //                .transform(new CenterCrop(), new RoundedCorners(24))
 //                .transform(new RoundedCorners(40))
                 .into(holder.image);
@@ -52,7 +54,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                itemDataClickListener.onScrollPagerItemClick(itemDatos, holder.image);
+                matchCourseClickListener.onScrollPagerItemClick(matchCourseDatos, holder.image);
             }
         });
     }

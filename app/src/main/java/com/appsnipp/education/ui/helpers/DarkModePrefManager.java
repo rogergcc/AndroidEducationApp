@@ -2,7 +2,7 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.helpers;
+package com.appsnipp.education.ui.helpers;
 
 /**
  * Created by kapil on 20/01/17.

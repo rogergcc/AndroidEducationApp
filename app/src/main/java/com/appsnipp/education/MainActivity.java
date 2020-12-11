@@ -14,13 +14,12 @@ import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-
 import com.appsnipp.education.databinding.ActivityMainBinding;
-import com.appsnipp.education.fragments.CoursesStaggedFragment;
-import com.appsnipp.education.fragments.HomeCoursesFragment;
-import com.appsnipp.education.fragments.MatchesCoursesFragment;
-import com.appsnipp.education.helpers.BottomNavigationBehavior;
-import com.appsnipp.education.helpers.DarkModePrefManager;
+import com.appsnipp.education.ui.fragments.CoursesStaggedFragment;
+import com.appsnipp.education.ui.fragments.HomeCoursesFragment;
+import com.appsnipp.education.ui.fragments.MatchesCoursesFragment;
+import com.appsnipp.education.ui.helpers.BottomNavigationBehavior;
+import com.appsnipp.education.ui.helpers.DarkModePrefManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 

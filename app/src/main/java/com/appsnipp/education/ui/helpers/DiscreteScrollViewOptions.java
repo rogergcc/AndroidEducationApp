@@ -2,7 +2,7 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.helpers;
+package com.appsnipp.education.ui.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -21,9 +21,6 @@ import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 
 import java.lang.ref.WeakReference;
 
-/**
- * Created by yarolegovich on 08.03.2017.
- */
 
 public class DiscreteScrollViewOptions {
 

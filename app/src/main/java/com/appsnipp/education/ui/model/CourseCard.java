@@ -2,7 +2,7 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.model;
+package com.appsnipp.education.ui.model;
 
 public class CourseCard {
 

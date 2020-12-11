@@ -2,7 +2,7 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.fragments;
+package com.appsnipp.education.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -19,12 +19,11 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.appsnipp.education.CourseStaggedActivity;
 import com.appsnipp.education.R;
-import com.appsnipp.education.adapter.CourseRecyclerAdapter;
-import com.appsnipp.education.adapter.CoursesItemClickListener;
 import com.appsnipp.education.databinding.FragmentCoursesStaggedBinding;
-import com.appsnipp.education.model.CourseCard;
+import com.appsnipp.education.ui.adapter.CourseRecyclerAdapter;
+import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
+import com.appsnipp.education.ui.model.CourseCard;
 
 import java.util.ArrayList;
 

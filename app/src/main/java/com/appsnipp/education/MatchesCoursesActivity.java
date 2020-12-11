@@ -2,20 +2,21 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.matchcourses;
+package com.appsnipp.education;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.appsnipp.education.R;
-import com.appsnipp.education.fragments.ItemDataClickListener;
-import com.appsnipp.education.helpers.DiscreteScrollViewOptions;
+import com.appsnipp.education.ui.adapter.MatchesCoursesAdapter;
+import com.appsnipp.education.ui.helpers.DiscreteScrollViewOptions;
+import com.appsnipp.education.ui.listeners.MatchCourseClickListener;
+import com.appsnipp.education.ui.model.MatchCourse;
+import com.appsnipp.education.ui.model.MyMatchesCourses;
 import com.yarolegovich.discretescrollview.DSVOrientation;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
@@ -24,16 +25,14 @@ import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 import java.util.List;
 
 public class MatchesCoursesActivity extends AppCompatActivity
-        implements DiscreteScrollView.OnItemChangedListener<ShopAdapter.ViewHolder>,
+        implements DiscreteScrollView.OnItemChangedListener<MatchesCoursesAdapter.ViewHolder>,
         View.OnClickListener
-        , ItemDataClickListener {
+        , MatchCourseClickListener {
 
-    private List<Item> data;
-    private Shop shop;
+    private List<MatchCourse> data;
+    private MyMatchesCourses myMatchesCourses;
 
-    private TextView currentItemName;
-    private TextView currentItemPrice;
-    private ImageView rateItemButton;
+
     private DiscreteScrollView itemPicker;
     private InfiniteScrollAdapter<?> infiniteAdapter;
 
@@ -44,12 +43,12 @@ public class MatchesCoursesActivity extends AppCompatActivity
         setContentView(R.layout.activity_matches_courses);
 
 
-        shop = Shop.get();
-        data = shop.getData();
+        myMatchesCourses = MyMatchesCourses.get();
+        data = myMatchesCourses.getData();
         itemPicker = findViewById(R.id.item_picker);
         itemPicker.setOrientation(DSVOrientation.HORIZONTAL);
         itemPicker.addOnItemChangedListener(this);
-        infiniteAdapter = InfiniteScrollAdapter.wrap(new ShopAdapter(data, this));
+        infiniteAdapter = InfiniteScrollAdapter.wrap(new MatchesCoursesAdapter(data, this));
         itemPicker.setAdapter(infiniteAdapter);
         itemPicker.setItemTransitionTimeMillis(DiscreteScrollViewOptions.getTransitionTime());
         itemPicker.setItemTransformer(new ScaleTransformer.Builder()
@@ -67,7 +66,7 @@ public class MatchesCoursesActivity extends AppCompatActivity
         switch (view.getId()) {
             case R.id.item_picker:
                 int realPosition = infiniteAdapter.getRealPosition(itemPicker.getCurrentItem());
-                Item current = data.get(realPosition);
+                MatchCourse current = data.get(realPosition);
                 Toast.makeText(this, "Data " + current.getName(), Toast.LENGTH_SHORT).show();
                 //changeRateButtonState(current);
                 break;
@@ -89,12 +88,12 @@ public class MatchesCoursesActivity extends AppCompatActivity
     }
 
     @Override
-    public void onCurrentItemChanged(@Nullable ShopAdapter.ViewHolder viewHolder, int adapterPosition) {
+    public void onCurrentItemChanged(@Nullable MatchesCoursesAdapter.ViewHolder viewHolder, int adapterPosition) {
 
     }
 
     @Override
-    public void onScrollPagerItemClick(Item courseCard, ImageView imageView) {
+    public void onScrollPagerItemClick(MatchCourse courseCard, ImageView imageView) {
 
     }
 }

@@ -2,15 +2,14 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.fragments;
+package com.appsnipp.education.ui.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.appsnipp.education.R;
 

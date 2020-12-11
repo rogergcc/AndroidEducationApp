@@ -7,9 +7,6 @@ package com.appsnipp.education;
 import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -20,9 +17,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.appsnipp.education.adapter.CourseRecyclerAdapter;
-import com.appsnipp.education.adapter.CoursesItemClickListener;
-import com.appsnipp.education.model.CourseCard;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.appsnipp.education.ui.adapter.CourseRecyclerAdapter;
+import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
+import com.appsnipp.education.ui.model.CourseCard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,6 @@ public class CourseStaggedActivity extends AppCompatActivity
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_course_stagged);
-
 
 
         edt_search = findViewById(R.id.edt_search);
@@ -73,12 +73,12 @@ public class CourseStaggedActivity extends AppCompatActivity
 
         courseCards = new ArrayList<>();
 
-        courseCards.add(new CourseCard(1,R.drawable.course_design_thinking, "Desing Thinking", "19 courses"));
-        courseCards.add(new CourseCard(2,R.drawable.course_design_coding, "Coding", "14 courses"));
-        courseCards.add(new CourseCard(3,R.drawable.course_design_marketing, "Marketing", "24 courses"));
-        courseCards.add(new CourseCard(4,R.drawable.course_design_securityexpert, "Security Expert", "18 courses"));
-        courseCards.add(new CourseCard(5,R.drawable.course_design_whatisthisshit, "Locations", "21 courses"));
-        courseCards.add(new CourseCard(6,R.drawable.course_design_coding, "Big Data", "10 courses"));
+        courseCards.add(new CourseCard(1, R.drawable.course_design_thinking, "Desing Thinking", "19 courses"));
+        courseCards.add(new CourseCard(2, R.drawable.course_design_coding, "Coding", "14 courses"));
+        courseCards.add(new CourseCard(3, R.drawable.course_design_marketing, "Marketing", "24 courses"));
+        courseCards.add(new CourseCard(4, R.drawable.course_design_securityexpert, "Security Expert", "18 courses"));
+        courseCards.add(new CourseCard(5, R.drawable.course_design_whatisthisshit, "Locations", "21 courses"));
+        courseCards.add(new CourseCard(6, R.drawable.course_design_coding, "Big Data", "10 courses"));
 
         adapter = new CourseRecyclerAdapter(this, courseCards, this);
 
@@ -98,6 +98,7 @@ public class CourseStaggedActivity extends AppCompatActivity
         //...perform search
 
     }
+
     @Override
     public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
 

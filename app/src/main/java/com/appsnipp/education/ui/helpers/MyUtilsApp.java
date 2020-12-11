@@ -2,7 +2,7 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.helpers;
+package com.appsnipp.education.ui.helpers;
 
 import android.content.Context;
 import android.util.Log;
