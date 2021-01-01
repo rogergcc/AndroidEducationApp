@@ -16,7 +16,7 @@
 
         android:background="@color/contentBodyColor"
         android:padding="@dimen/nav_header_vertical_spacing"
-        tools:context=".MatchesCoursesActivity"
+
 
         >
 
@@ -63,18 +63,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_find_title" />
 
-            <com.yarolegovich.discretescrollview.DiscreteScrollView
-                android:id="@+id/item_picker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/normalPadding"
-                android:layout_marginBottom="@dimen/normalPadding"
-                app:layout_constraintEnd_toEndOf="parent"
+<!--            <com.yarolegovich.discretescrollview.DiscreteScrollView-->
+<!--                android:id="@+id/item_picker"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/normalPadding"-->
+<!--                android:layout_marginBottom="@dimen/normalPadding"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
 
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView3"-->
+<!--                tools:listitem="@layout/item_shop_card" />-->
+<!--            &lt;!&ndash; orientation is optional, default is horizontal &ndash;&gt;-->
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_marginTop="@dimen/normalPadding"
+                android:layout_width="0dp"
+                android:overScrollMode="never"
+                android:clipToPadding="false"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:listitem="@layout/item_shop_card" />
-            <!-- orientation is optional, default is horizontal -->
+                />
 
             <LinearLayout
 
@@ -87,7 +100,7 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_picker">
+                app:layout_constraintTop_toBottomOf="@+id/view_pager">
 
 
                 <RelativeLayout

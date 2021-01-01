@@ -15,4 +15,6 @@
     <string name="nav_title_tools">Tools</string>
     <string name="nav_title_share">Share</string>
     <string name="nav_title_toggle_theme">Toggle Theme</string>
+    <string name="title_topic_course">Design Thinking</string>
+    <string name="number_courses">19 courses</string>
 </resources>

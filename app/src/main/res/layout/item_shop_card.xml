@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Mobile"
+            android:text="@string/title_topic_course"
             android:fontFamily="@font/calibri"
             android:textColor="@color/contentTextColor" />
 
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="X cursos"
+            android:text="@string/number_courses"
             android:textColor="@color/contentTextColor"
             android:textSize="13sp" />
     </LinearLayout>

@@ -3,19 +3,15 @@
   ~ Copyright (c) 2020. rogergcc
   -->
 
-<androidx.cardview.widget.CardView
-    android:id="@+id/card_item"
+<androidx.cardview.widget.CardView android:id="@+id/card_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
 
-
-    android:layout_marginRight="@dimen/horizontal_card"
+    android:layout_marginEnd="@dimen/horizontal_card"
     android:layout_marginBottom="@dimen/staggedmarginbottom"
-
 
 
     android:clickable="true"
@@ -38,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/img_card_height"
             android:scaleType="centerCrop"
-            android:src="@drawable/course_design_thinking" />
+            android:src="@drawable/course_design_thinking"
+            android:contentDescription="@string/app_name" />
 
         <TextView
             android:id="@+id/stag_item_course"
@@ -51,7 +48,7 @@
 
 
             android:fontFamily="@font/bariol_bold"
-            android:text="Design Thinking"
+            android:text="@string/title_topic_course"
             android:textColor="@color/darkTextColor"
             android:textSize="15sp" />
 
@@ -67,9 +64,9 @@
 
             android:fontFamily="@font/bariol_bold"
 
-            android:text="19 courses"
+            android:text="@string/number_courses"
             android:textColor="@color/dashboard_subtitle"
-            android:textSize="11sp" />
+            android:textSize="@dimen/d_number_courses" />
 
 
     </LinearLayout>

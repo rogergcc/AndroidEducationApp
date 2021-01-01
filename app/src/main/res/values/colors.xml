@@ -50,4 +50,6 @@
     <color name="option3">#E34B4A</color>
     <color name="option4">#FF8033</color>
 
+    <color name="colorPrimaryText">@android:color/white</color>
+
 </resources>

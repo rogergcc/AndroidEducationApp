@@ -2,9 +2,6 @@ package com.appsnipp.education;
 
 import android.app.Application;
 
-import com.appsnipp.education.ui.helpers.DiscreteScrollViewOptions;
-
-
 
 public class App extends Application {
 
@@ -19,6 +16,5 @@ public class App extends Application {
         super.onCreate();
         instance = this;
         //this need for using course pager scrolling
-        DiscreteScrollViewOptions.init(this);
     }
 }

@@ -40,7 +40,7 @@ public class MyMatchesCourses {
                 new MatchCourse(3, "Development", "265 courses available", R.drawable.education_4),
                 new MatchCourse(4, "Security", "18 courses available", R.drawable.education_1),
                 new MatchCourse(5, "Ethical Hacking", "36 courses available", R.drawable.education_5),
-                new MatchCourse(6, "Mobile", "145 courses available", R.drawable.course_thinking)
+                new MatchCourse(6, "Mobile", "145 courses available", R.drawable.education_6)
 
         );
     }
