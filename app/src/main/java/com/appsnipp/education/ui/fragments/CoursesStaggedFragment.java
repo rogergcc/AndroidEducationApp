@@ -50,6 +50,7 @@ public class CoursesStaggedFragment extends Fragment
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_courses_stagged, container, false);
+
         binding = FragmentCoursesStaggedBinding.inflate(getLayoutInflater());
         mcontext = this.getContext();
         View view = binding.getRoot();

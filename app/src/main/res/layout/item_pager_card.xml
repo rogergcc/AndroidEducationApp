@@ -41,11 +41,9 @@
 
             android:background="@color/nav_bar_color"
             android:src="@drawable/education_1"
-            tools:ignore="ContentDescription"
-            tools:layout_conversion_absoluteHeight="731dp"
-            tools:layout_conversion_absoluteWidth="411dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            android:contentDescription="@string/app_name"
+
+             />
 
 
     </androidx.cardview.widget.CardView>

@@ -13,14 +13,20 @@
 **Click the image below to enlarge.**
 
 
-<div>
- 
-<img src="/screenshots/init_view.JPG" height="480" width="270" hspace="5">
+<table>
+  <tr>
+     <td></td>
+     <td></td>
+     <td></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/init_view.JPG" width=270 height=auto></td>
+    <td><img src="screenshots/screenshot-1587165564580.jpg" width=270 height=auto></td>
+    <td><img src="screenshots/screenshot-1597998427057.jpg" width=270 height=auto></td>
+  </tr>
 
-<img src="/screenshots/screenshot-1587165564580.jpg" height="480" width="270" hspace="5">
 
-<img src="/screenshots/screenshot-1587165595487.jpg" height="480" width="270" hspace="5">
-<img src="/screenshots/screenshot-1597998427057.jpg" height="480" width="270" hspace="5">
 
-</div>
+
+ </table>
 
