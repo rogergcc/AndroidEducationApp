@@ -13,15 +13,17 @@
 
 This module use the following libraries:
 
-* [Androidx](https://developer.android.com/jetpack/androidx)
-* [View Binding](https://developer.android.com/topic/libraries/view-binding)
-* [ViewPager2](https://developer.android.com/jetpack/androidx/releases/viewpager2)
-* [Android Jetpack's Navigation](https://developer.android.com/guide/navigation)
-* [Material Design](https://material.io/develop/android/docs/getting-started)
+- [Androidx](https://developer.android.com/jetpack/androidx)
+- [ViewPager2](https://developer.android.com/jetpack/androidx/releases/viewpager2)
+- [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
+- [Navigation](https://developer.android.com/guide/navigation)
+- [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
+- [Google Material Design](https://material.io/develop/android/docs/getting-started)
 
-* **Images**
-	* Glide 
-	* Circleimageview
+
+- **Images**
+	- Glide 
+	- Circleimageview
 
   
  ## 📸 Screenshots
