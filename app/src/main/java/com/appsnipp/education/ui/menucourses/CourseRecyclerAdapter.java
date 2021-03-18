@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020. rogergcc
+ * Copyright (c) 2021. rogergcc
  */
 
-package com.appsnipp.education.ui.adapter;
+package com.appsnipp.education.ui.menucourses;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.ItemCardBinding;
 import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
@@ -67,15 +66,15 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 //        }
 
         //2nd intent card only bottom margin in xml  and only top margin in adapter- it works
-        if (i%2==1){
 
-            int dimenTopPixeles = getDimensionValuePixels(R.dimen.staggedmarginbottom);
-            int dimenleftPixeles = getDimensionValuePixels(R.dimen.horizontal_card);
-            ViewGroup.MarginLayoutParams cardViewMarginParams = (ViewGroup.MarginLayoutParams) viewHolder.itemCardBinding.cardItem.getLayoutParams();
-//            cardViewMarginParams.setMargins(dpToPx(8), dpToPx(20), 0, 0);
-            cardViewMarginParams.setMargins(dimenleftPixeles, dimenTopPixeles, 0, 0);
-            viewHolder.itemCardBinding.cardItem.requestLayout();
-        }
+//        if (i%2==1){
+//
+//            int dimenTopPixeles = getDimensionValuePixels(R.dimen.staggedmarginbottom);
+//            int dimenleftPixeles = getDimensionValuePixels(R.dimen.horizontal_card);
+//            ViewGroup.MarginLayoutParams cardViewMarginParams = (ViewGroup.MarginLayoutParams) viewHolder.itemCardBinding.cardItem.getLayoutParams();
+//            cardViewMarginParams.setMargins(dimenleftPixeles, dimenTopPixeles, 0, 0);
+//            viewHolder.itemCardBinding.cardItem.requestLayout();
+//        }
 
 //      viewHolder.card_item.setBackgroundColor(mContext.getResources().getColor(R.color.color1));
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {

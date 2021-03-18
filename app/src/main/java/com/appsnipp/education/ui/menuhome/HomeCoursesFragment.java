@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020. rogergcc
+ * Copyright (c) 2021. rogergcc
  */
 
-package com.appsnipp.education.ui.fragments;
+package com.appsnipp.education.ui.menuhome;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

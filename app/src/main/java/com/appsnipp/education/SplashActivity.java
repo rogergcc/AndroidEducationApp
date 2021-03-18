@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
-        //region REGION HANDLER
+        //region REGION alternative desing xml
 
 //        final Handler handler = new Handler();
 //        handler.postDelayed(new Runnable() {

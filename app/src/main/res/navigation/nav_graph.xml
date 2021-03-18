@@ -11,17 +11,17 @@
 
     <fragment
         android:id="@+id/homeCoursesFragment"
-        android:name="com.appsnipp.education.ui.fragments.HomeCoursesFragment"
+        android:name="com.appsnipp.education.ui.menuhome.HomeCoursesFragment"
         android:label="fragment_home_courses"
         tools:layout="@layout/fragment_home_courses" />
     <fragment
         android:id="@+id/coursesStaggedFragment"
-        android:name="com.appsnipp.education.ui.fragments.CoursesStaggedFragment"
+        android:name="com.appsnipp.education.ui.menucourses.CoursesStaggedFragment"
         android:label="fragment_courses_stagged"
         tools:layout="@layout/fragment_courses_stagged" />
     <fragment
         android:id="@+id/matchesCoursesFragment"
-        android:name="com.appsnipp.education.ui.fragments.MatchesCoursesFragment"
+        android:name="com.appsnipp.education.ui.menusearch.MatchesCoursesFragment"
         android:label="fragment_matches_courses"
         tools:layout="@layout/fragment_matches_courses" />
 </navigation>

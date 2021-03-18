@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020. rogergcc
+ * Copyright (c) 2021. rogergcc
  */
 
-package com.appsnipp.education.ui.fragments;
+package com.appsnipp.education.ui.menucourses;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -21,7 +21,6 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.FragmentCoursesStaggedBinding;
-import com.appsnipp.education.ui.adapter.CourseRecyclerAdapter;
 import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
 

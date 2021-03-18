@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020. rogergcc
+ * Copyright (c) 2021. rogergcc
  */
 
-package com.appsnipp.education.ui.fragments;
+package com.appsnipp.education.ui.menusearch;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,12 +17,11 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.FragmentMatchesCoursesBinding;
-import com.appsnipp.education.ui.adapter.CourseTopicsViewPager;
 import com.appsnipp.education.ui.helpers.HorizontalMarginItemDecoration;
-import com.appsnipp.education.ui.helpers.MyUtilsApp;
 import com.appsnipp.education.ui.listeners.MatchCourseClickListener;
 import com.appsnipp.education.ui.model.MatchCourse;
 import com.appsnipp.education.ui.model.MyMatchesCourses;
+import com.appsnipp.education.ui.utils.MyUtilsApp;
 
 import java.util.List;
 import java.util.Locale;

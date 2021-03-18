@@ -23,6 +23,7 @@
         android:title="Search" />
 
     <item
+        android:visible="false"
         android:id="@+id/navigationMyProfile"
         android:icon="@drawable/ic_user_icon"
         android:title="User" />

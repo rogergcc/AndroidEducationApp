@@ -1,4 +1,8 @@
-package com.appsnipp.education.ui.adapter;
+/*
+ * Copyright (c) 2021. rogergcc
+ */
+
+package com.appsnipp.education.ui.menusearch;
 
 import android.content.Context;
 import android.view.LayoutInflater;

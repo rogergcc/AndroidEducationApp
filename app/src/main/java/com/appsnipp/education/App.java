@@ -15,6 +15,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        //this need for using course pager scrolling
+
     }
 }
