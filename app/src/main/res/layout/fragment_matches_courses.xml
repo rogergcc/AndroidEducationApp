@@ -3,23 +3,19 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.menusearch.MatchesCoursesFragment">
 
     <androidx.core.widget.NestedScrollView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
         android:background="@color/contentBodyColor"
-        android:padding="@dimen/nav_header_vertical_spacing"
-
-
-        >
-
+        android:padding="@dimen/nav_header_vertical_spacing">
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -63,31 +59,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_find_title" />
 
-<!--            <com.yarolegovich.discretescrollview.DiscreteScrollView-->
-<!--                android:id="@+id/item_picker"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="@dimen/normalPadding"-->
-<!--                android:layout_marginBottom="@dimen/normalPadding"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            <com.yarolegovich.discretescrollview.DiscreteScrollView-->
+            <!--                android:id="@+id/item_picker"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/normalPadding"-->
+            <!--                android:layout_marginBottom="@dimen/normalPadding"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
 
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView3"-->
-<!--                tools:listitem="@layout/item_shop_card" />-->
-<!--            &lt;!&ndash; orientation is optional, default is horizontal &ndash;&gt;-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView3"-->
+            <!--                tools:listitem="@layout/item_shop_card" />-->
+            <!--            &lt;!&ndash; orientation is optional, default is horizontal &ndash;&gt;-->
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/view_pager"
-                android:layout_marginTop="@dimen/normalPadding"
                 android:layout_width="0dp"
-                android:overScrollMode="never"
-                android:clipToPadding="false"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normalPadding"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <LinearLayout
 
@@ -132,6 +127,7 @@
                 <include layout="@layout/item_popular_course" />
 
                 <include layout="@layout/item_popular_course" />
+
             </LinearLayout>
 
 

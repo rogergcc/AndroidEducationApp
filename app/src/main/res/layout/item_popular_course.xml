@@ -11,7 +11,10 @@
     <ImageView
         android:background="@drawable/play_course"
 
-        android:layout_margin="@dimen/vertical_search"
+        android:layout_marginTop="@dimen/top_text_subtitle_card"
+        android:layout_marginEnd="@dimen/top_text_subtitle_card"
+        android:layout_marginBottom="@dimen/top_text_subtitle_card"
+
         android:padding="12dp"
         android:src="@drawable/ic_play"
 
@@ -24,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:gravity="center_vertical"
-        android:paddingTop="@dimen/horizontal_card"
         android:layout_height="match_parent">
 
         <TextView

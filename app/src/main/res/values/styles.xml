@@ -14,7 +14,7 @@
         <item name="android:windowContentTransitions">true</item>
 
         <!--        <item name="colorControlNormal">@color/colorPrimaryDark</item>-->
-        <item name="android:textColorSecondary">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/grey_light</item>
         <item name="colorControlActivated">@color/colorAccent</item>
 
 

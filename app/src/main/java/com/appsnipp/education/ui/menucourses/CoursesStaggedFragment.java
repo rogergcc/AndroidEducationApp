@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.FragmentCoursesStaggedBinding;
+import com.appsnipp.education.ui.helpers.GridSpacingItemDecoration;
 import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
 
@@ -38,6 +39,7 @@ public class CoursesStaggedFragment extends Fragment
     public CoursesStaggedFragment() {
         // Required empty public constructor
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +66,7 @@ public class CoursesStaggedFragment extends Fragment
                     //U can use a other view with activityresult
                     performSearch();
                     Toast.makeText(mcontext,
-                            "Edt Searching Click: " +  binding.edtSearch.getText().toString().trim(),
+                            "Edt Searching Click: " + binding.edtSearch.getText().toString().trim(),
                             Toast.LENGTH_SHORT).show();
                     return true;
                 }
@@ -72,20 +74,36 @@ public class CoursesStaggedFragment extends Fragment
             }
         });
 
+        StaggeredGridLayoutManager layoutManager =
+                new StaggeredGridLayoutManager(
+                        2,
+                        StaggeredGridLayoutManager.VERTICAL);
+
         binding.rvCourses.setLayoutManager(
-                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+                layoutManager
         );
         binding.rvCourses.setClipToPadding(false);
         binding.rvCourses.setHasFixedSize(true);
 
+//        binding.rvCourses.addItemDecoration(
+//                new HorizontalMarginItemDecoration(
+//                        mcontext,
+//                        R.dimen.top_text_subtitle_card,
+//                        R.dimen.top_text_subtitle_card
+//                )
+//        );
+
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.horizontal_card);
+        binding.rvCourses.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true, 0));
+
         courseCards = new ArrayList<>();
 
         courseCards.add(new CourseCard(1, R.drawable.course_design_thinking, "Desing Thinking", "19 courses"));
-        courseCards.add(new CourseCard(2, R.drawable.course_design_coding, "Coding", "14 courses"));
+        courseCards.add(new CourseCard(2, R.drawable.course_design_coding, "Software Development", "14 courses"));
         courseCards.add(new CourseCard(3, R.drawable.course_design_marketing, "Marketing", "24 courses"));
         courseCards.add(new CourseCard(4, R.drawable.course_design_securityexpert, "Security Expert", "18 courses"));
         courseCards.add(new CourseCard(5, R.drawable.course_design_whatisthisshit, "Locations", "21 courses"));
-        courseCards.add(new CourseCard(6, R.drawable.course_design_coding, "Big Data", "10 courses"));
+        courseCards.add(new CourseCard(6, R.drawable.course_coding, "Big Data", "10 courses"));
 
         adapter = new CourseRecyclerAdapter(mcontext, courseCards, this);
 
@@ -95,12 +113,14 @@ public class CoursesStaggedFragment extends Fragment
         binding.rvCourses.setAdapter(adapter);
         return view;
     }
+
     private void performSearch() {
         binding.edtSearch.clearFocus();
         InputMethodManager in = (InputMethodManager) mcontext.getSystemService(Context.INPUT_METHOD_SERVICE);
-        in.hideSoftInputFromWindow( binding.edtSearch.getWindowToken(), 0);
+        in.hideSoftInputFromWindow(binding.edtSearch.getWindowToken(), 0);
         //...perform search
     }
+
     @Override
     public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
         Toast.makeText(mcontext, courseCard.getCourseTitle(), Toast.LENGTH_LONG).show();
