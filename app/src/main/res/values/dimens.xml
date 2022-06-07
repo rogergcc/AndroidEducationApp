@@ -20,12 +20,13 @@
 
     <!--    Dashboard-->
     <dimen name="normalPadding">20dp</dimen>
+    <dimen name="normalPaddingDouble">30dp</dimen>
     <dimen name="staggedmarginbottom">21dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="horizontal_dashboard">32dp</dimen>
     <dimen name="img_card_height">120dp</dimen>
     <dimen name="drawable_left">5dp</dimen>
-    <dimen name="card_course_dashboard_elevation">.2dp</dimen>
+    <dimen name="card_course_dashboard_elevation">.1dp</dimen>
 
     <dimen name="vertical_search">10dp</dimen>
     <dimen name="card_radius">14dp</dimen>

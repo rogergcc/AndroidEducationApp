@@ -2,7 +2,7 @@
   ~ Copyright (c) 2020. rogergcc
   -->
 
-<androidx.core.widget.NestedScrollView
+<android.support.v4.widget.NestedScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
 
     android:background="#ffba60"
-    >
+    tools:context=".DashboardCourseActivity">
 
 
     <LinearLayout
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
+                    <!--                    Layout Cards-->
                     <LinearLayout
                         android:id="@+id/ll_firstcoureses"
                         android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                         android:orientation="horizontal"
                         android:weightSum="2">
 
-                        <androidx.cardview.widget.CardView
+                        <android.support.v7.widget.CardView
 
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -190,9 +190,9 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </android.support.v7.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
+                        <android.support.v7.widget.CardView
 
                             android:layout_width="0dp"
 
@@ -251,7 +251,7 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </android.support.v7.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -266,7 +266,7 @@
                         android:weightSum="2">
 
 
-                        <androidx.cardview.widget.CardView
+                        <android.support.v7.widget.CardView
 
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -328,9 +328,9 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </android.support.v7.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
+                        <android.support.v7.widget.CardView
 
                             android:layout_width="0dp"
 
@@ -390,7 +390,7 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </android.support.v7.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -404,7 +404,7 @@
                         android:weightSum="2">
 
 
-                        <androidx.cardview.widget.CardView
+                        <android.support.v7.widget.CardView
 
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -466,9 +466,9 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </android.support.v7.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
+                        <android.support.v7.widget.CardView
 
                             android:layout_width="0dp"
 
@@ -528,7 +528,7 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </android.support.v7.widget.CardView>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -537,4 +537,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>
+</android.support.v4.widget.NestedScrollView>
