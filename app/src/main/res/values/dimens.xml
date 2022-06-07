@@ -34,5 +34,11 @@
 
     <dimen name="top_text_card">14dp</dimen>
     <dimen name="top_text_subtitle_card">4dp</dimen>
+    <dimen name="d_number_courses">11sp</dimen>
 
+    <dimen name="viewpager_next_item_visible">26dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">42dp</dimen>
+    <dimen name="viewpager_next_item_visible_testing">29dp</dimen>
+
+    <dimen name="viewpager_current_item_horizontal_margin_testing">60dp</dimen>
 </resources>

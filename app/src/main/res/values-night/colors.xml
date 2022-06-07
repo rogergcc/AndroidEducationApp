@@ -5,4 +5,5 @@
     <color name="contentTextColor">#fff</color>
     <color name="bottomNavigationBackground">#2A2E43</color>
 
+    <color name="grey_light">#fff</color>
 </resources>

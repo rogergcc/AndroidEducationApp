@@ -1,8 +1,21 @@
 <resources>
-    <string name="app_name">Education</string>
+    <string name="app_name">MyCoursesApp</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_title_import">Import</string>
+    <string name="nav_title_gallery">Gallery</string>
+    <string name="nav_title_slideshow">Slideshow</string>
+    <string name="nav_title_tools">Tools</string>
+    <string name="nav_title_share">Share</string>
+    <string name="nav_title_toggle_theme">Toggle Theme</string>
+    <string name="title_topic_course">Design Thinking</string>
+    <string name="number_courses">19 courses</string>
+    <string name="msg_splash">EducationApp</string>
 </resources>

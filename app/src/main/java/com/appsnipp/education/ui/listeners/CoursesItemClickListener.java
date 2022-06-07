@@ -2,11 +2,11 @@
  * Copyright (c) 2020. rogergcc
  */
 
-package com.appsnipp.education.adapter;
+package com.appsnipp.education.ui.listeners;
 
 import android.widget.ImageView;
 
-import com.appsnipp.education.model.CourseCard;
+import com.appsnipp.education.ui.model.CourseCard;
 
 public interface CoursesItemClickListener {
 

@@ -1,11 +1,82 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light">-->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/option1</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:fontFamily">@font/calibri</item>
+        <item name="android:windowBackground">@color/frutorial_title</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <!--        <item name="colorControlNormal">@color/colorPrimaryDark</item>-->
+        <item name="android:textColorSecondary">@color/grey_light</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+
+    </style>
+
+    <style name="SplashTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/splash_drawable</item>
+    </style>
+
+    <style name="SplashThemeCorrect" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_drawable</item>
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+
+<!--        <item name="android:windowFullscreen">true</item>-->
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+    <style name="CardViewStyle" parent="Base.CardView">
+
+        <!--<item name="android:foreground">@drawable/ripple_custom</item>-->
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <!--<item name="cardUseCompatPadding">true</item>-->
+
+
+    </style>
+
+
+<!--    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">-->
+    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <!--        <item name="android:foreground">@drawable/ripple_custom</item>-->
+        <item name="android:background">@color/bottomNavigationBackground</item>
+        <!--<item name="itemBackground">@drawable/ripple_custom</item>-->
+        <item name="itemIconTint">@color/bottom_navigation_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_color</item>
+        <item name="fontFamily">@font/poppins</item>
+        <!--        <item name="android:fontFamily">@font/varela_round</item>-->
+
+    </style>
+
+    <style name="CardViewStyleDate" parent="Base.CardView">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <!--<item name="android:foreground">@drawable/ripple_custom</item>-->
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardBackgroundColor">@color/colorPrimary</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">0.1dp</item>
+        <item name="cardPreventCornerOverlap">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -39,4 +110,12 @@
     </style>
 
 
+    <style name="Animation.WindowSlideUpDown" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
 </resources>

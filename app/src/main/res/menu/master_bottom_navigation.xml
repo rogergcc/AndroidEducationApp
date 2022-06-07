@@ -3,27 +3,29 @@
 
     <item
         android:id="@+id/navigationMenu"
+        android:visible="false"
         android:icon="@android:drawable/ic_menu_sort_by_size"
         android:title="Menu" />
 
     <item
-        android:id="@+id/navigationMyCourses"
+        android:id="@+id/coursesStaggedFragment"
         android:icon="@drawable/ic_effort"
         android:title="Courses" />
 
     <item
-        android:id="@+id/navigationHome"
+        android:id="@+id/homeCoursesFragment"
         android:icon="@drawable/ic_home"
         android:title="Home" />
 
     <item
-        android:id="@+id/navigationSearch"
-        android:icon="@android:drawable/ic_menu_search"
+        android:id="@+id/matchesCoursesFragment"
+        android:icon="@drawable/ic_search_black_24dp"
         android:title="Search" />
 
     <item
+        android:visible="false"
         android:id="@+id/navigationMyProfile"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_user_icon"
         android:title="User" />
 
 </menu>

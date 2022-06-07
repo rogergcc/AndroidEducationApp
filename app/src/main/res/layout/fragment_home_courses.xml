@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020. rogergcc
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.menuhome.HomeCoursesFragment"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        style="@style/parent.contentLayout"
+        android:paddingLeft="@dimen/normalPadding"
+        android:paddingRight="@dimen/normalPadding"
+        android:paddingBottom="@dimen/normalPadding"
+        >
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/viewParent.headerText"
+                    android:text="Hello Kapil!" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="20dp"
+                        android:minHeight="200dp"
+                        app:cardBackgroundColor="#FF402D"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="@dimen/card_maincourse_elevation"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Continue to \nWebdeveloper Course"
+                                android:textColor="@color/whiteBodyColor"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="150dp"
+                                android:layout_height="5dp"
+                                android:layout_marginTop="15dp"
+                                android:progress="60"
+                                android:progressDrawable="@drawable/progress_drawable" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="60% Complete"
+                                android:textColor="@color/whiteBodyColor"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:elevation="@dimen/card_image_elevation"
+                        android:src="@drawable/header_image" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="60dp"
+                        android:background="@drawable/refer_earn_button"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Refer your friends and\n earn free course *"
+                            android:textAlignment="center"
+                            android:textColor="@color/whiteTextColor"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:src="@drawable/refer_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        style="@style/viewParent.headerText"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="Popular Courses" />
+
+                    <TextView
+                        style="@style/viewParent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="See All"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/headerMoreTextSize"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/card_popular_courses" />
+
+                        <include layout="@layout/card_popular_courses" />
+
+                        <include layout="@layout/card_popular_courses" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        style="@style/viewParent.headerText"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="Tutorials" />
+
+                    <TextView
+                        style="@style/viewParent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="See All"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/headerMoreTextSize"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/card_frutorials" />
+
+                        <include layout="@layout/card_frutorials" />
+
+                        <include layout="@layout/card_frutorials" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

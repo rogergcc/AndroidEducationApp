@@ -2,7 +2,7 @@
   ~ Copyright (c) 2020. rogergcc
   -->
 
-<android.support.v4.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -79,7 +79,7 @@
             android:background="@drawable/container_search"
             android:drawableStart="@drawable/ic_search_black_24dp"
 
-            android:drawableLeft="@drawable/ic_search_black_24dp"
+
 
             android:drawablePadding="@dimen/drawable_left"
             android:fontFamily="@font/bariol_regular"
@@ -91,8 +91,8 @@
             android:paddingBottom="@dimen/vertical_search"
 
             android:hint="Search Here"
-            android:textColorHint="@color/bottom_navigation_color"
-            android:textColor="@color/contentTextColor"
+            android:textColorHint="@color/frutorial_title"
+            android:textColor="@color/colorPrimaryDark"
 
             android:textSize="14sp">
 
@@ -125,17 +125,21 @@
                     android:layout_marginBottom="@dimen/horizontal_card"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_courses"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        tools:listitem="@layout/item_card"
+                        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                        tools:itemCount="7"
+                        app:spanCount="2"
 
                         android:layout_marginLeft="@dimen/horizontal_dashboard"
                         android:layout_marginTop="@dimen/normalPadding"
                         android:layout_marginRight="@dimen/horizontal_dashboard"
                         >
 
-                    </android.support.v7.widget.RecyclerView>
+                    </androidx.recyclerview.widget.RecyclerView>
 
                 </LinearLayout>
             </RelativeLayout>
@@ -143,4 +147,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>
