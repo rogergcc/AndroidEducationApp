@@ -4,6 +4,8 @@
 
 package com.appsnipp.education.ui.menusearch;
 
+import static java.lang.Math.abs;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,8 +27,6 @@ import com.appsnipp.education.ui.utils.MyUtilsApp;
 
 import java.util.List;
 import java.util.Locale;
-
-import static java.lang.Math.abs;
 
 
 public class MatchesCoursesFragment extends Fragment
@@ -103,7 +103,23 @@ public class MatchesCoursesFragment extends Fragment
 
                 MyUtilsApp.showLog(TAG, String.format(Locale.ENGLISH, "%d/%d", position + 1, matchCourseList.size()));
             }
+
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                MyUtilsApp.showToast(mcontext, matchCourseList.get(position).getName());
+//                Random rnd = new Random();
+//                int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+
+                int color= ((int)(Math.random()*16777215)) | (0xFF << 24);
+
+
+                binding.containerConstraint.setBackgroundColor(color);
+            }
         });
+
+
+
     }
 
 //    @Override

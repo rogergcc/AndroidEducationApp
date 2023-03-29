@@ -2,16 +2,14 @@
   ~ Copyright (c) 2020. rogergcc
   -->
 
-<android.support.v4.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#ffba60"
-    tools:context=".DashboardCourseActivity">
+    android:background="#ffba60">
 
 
     <LinearLayout
@@ -42,7 +40,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_weight="40"
                 android:fontFamily="@font/bariol_bold"
-                android:text="Hey, What would you like to learn today ?"
+                android:text="@string/title_hey"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp">
 
@@ -54,7 +52,8 @@
                 android:layout_height="match_parent"
 
                 android:layout_weight="60"
-                android:src="@drawable/refer_icon">
+                android:src="@drawable/refer_icon"
+                android:contentDescription="@null">
 
             </ImageView>
         </LinearLayout>
@@ -71,7 +70,6 @@
             android:background="@drawable/container_search"
             android:drawableStart="@drawable/ic_search_black_24dp"
 
-            android:drawableLeft="@drawable/ic_search_black_24dp"
 
             android:drawablePadding="@dimen/drawable_left"
             android:fontFamily="@font/bariol_regular"
@@ -82,7 +80,7 @@
             android:paddingRight="@dimen/normalPadding"
             android:paddingBottom="@dimen/vertical_search"
 
-            android:text="Search Here"
+            android:text="@string/edt_search"
             android:textColor="@color/bottomNavigationTextColor"
 
             android:textSize="14sp">
@@ -125,14 +123,13 @@
                         android:orientation="horizontal"
                         android:weightSum="2">
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
 
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
 
                             android:layout_marginTop="@dimen/horizontal_card"
                             android:layout_marginEnd="@dimen/horizontal_card"
-                            android:layout_marginRight="@dimen/horizontal_card"
                             android:layout_marginBottom="@dimen/horizontal_card"
 
                             android:layout_weight="1"
@@ -156,7 +153,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="@dimen/img_card_height"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/course_design_thinking" />
+                                    android:src="@drawable/course_design_thinking"
+                                    android:contentDescription="@null" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -168,7 +166,7 @@
 
 
                                     android:fontFamily="@font/bariol_bold"
-                                    android:text="Design Thinking"
+                                    android:text="@string/title_course_design"
                                     android:textColor="@color/darkTextColor"
                                     android:textSize="16sp" />
 
@@ -183,22 +181,22 @@
 
                                     android:fontFamily="@font/bariol_bold"
 
-                                    android:text="19 courses"
+                                    android:text="@string/title_course_design_count"
                                     android:textColor="@color/dashboard_subtitle"
                                     android:textSize="11sp" />
 
 
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
 
                             android:layout_width="0dp"
 
                             android:layout_height="wrap_content"
 
-                            android:layout_marginLeft="@dimen/horizontal_card"
+                            android:layout_marginStart="@dimen/horizontal_card"
                             android:layout_marginTop="@dimen/horizontal_card"
                             android:layout_marginBottom="@dimen/horizontal_card"
 
@@ -231,7 +229,7 @@
 
 
                                     android:fontFamily="@font/bariol_bold"
-                                    android:text="Coding"
+                                    android:text="@string/title_course_coding"
                                     android:textColor="@color/darkTextColor"
                                     android:textSize="16sp" />
 
@@ -245,13 +243,13 @@
                                     android:layout_marginBottom="@dimen/normalPadding"
 
                                     android:fontFamily="@font/bariol_bold"
-                                    android:text="21 courses"
+                                    android:text="@string/title_course_coding_count"
                                     android:textColor="@color/dashboard_subtitle"
                                     android:textSize="11sp" />
 
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -266,7 +264,7 @@
                         android:weightSum="2">
 
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
 
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -328,9 +326,9 @@
 
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
 
                             android:layout_width="0dp"
 
@@ -390,7 +388,7 @@
 
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -404,7 +402,7 @@
                         android:weightSum="2">
 
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
 
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -466,9 +464,9 @@
 
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
 
                             android:layout_width="0dp"
 
@@ -528,7 +526,7 @@
 
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -537,4 +535,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>
