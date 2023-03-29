@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
 
     android:background="#ffba60"
-    tools:context=".CourseStaggedActivity">
+    >
 
 
     <LinearLayout
@@ -42,7 +42,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_weight="40"
                 android:fontFamily="@font/bariol_bold"
-                android:text="Hey, What would you like to learn today ?"
+                android:text="@string/title_hey"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp">
 
@@ -54,7 +54,8 @@
                 android:layout_height="match_parent"
 
                 android:layout_weight="60"
-                android:src="@drawable/refer_icon">
+                android:src="@drawable/refer_icon"
+                android:contentDescription="@null">
 
             </ImageView>
         </LinearLayout>
@@ -63,7 +64,6 @@
             android:id="@+id/edt_search"
             android:imeOptions="actionSearch"
             android:inputType="text"
-            android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"
 
             android:maxLines="1"
             android:singleLine="true"
@@ -72,17 +72,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/horizontal_dashboard"
-
             android:layout_marginTop="@dimen/normalPadding"
             android:layout_marginRight="@dimen/horizontal_dashboard"
-
             android:background="@drawable/container_search"
             android:drawableStart="@drawable/ic_search_black_24dp"
 
 
-
             android:drawablePadding="@dimen/drawable_left"
-            android:fontFamily="@font/bariol_regular"
 
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/normalPadding"
@@ -90,11 +86,12 @@
             android:paddingRight="@dimen/normalPadding"
             android:paddingBottom="@dimen/vertical_search"
 
-            android:hint="Search Here"
+            android:hint="@string/edt_search"
             android:textColorHint="@color/frutorial_title"
             android:textColor="@color/colorPrimaryDark"
 
-            android:textSize="14sp">
+            android:textSize="14sp"
+            android:autofillHints="username">
 
         </EditText>
 

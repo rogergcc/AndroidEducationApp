@@ -18,4 +18,14 @@
     <string name="title_topic_course">Design Thinking</string>
     <string name="number_courses">19 courses</string>
     <string name="msg_splash">EducationApp</string>
+    <string name="title_hey">Hey, What would you like to learn today ?</string>
+    <string name="edt_search">Search Here</string>
+    <string name="title_course_design">Design Thinking</string>
+    <string name="title_course_design_count">19 courses</string>
+    <string name="title_course_coding">Coding</string>
+    <string name="title_course_coding_count">21 courses</string>
+    <string name="title_find_courses">Find your \nmatches courses</string>
+    <string name="title_courses_available">10 course available</string>
+    <string name="title_popular_courses">Popular Courses</string>
+    <string name="more">. .</string>
 </resources>
