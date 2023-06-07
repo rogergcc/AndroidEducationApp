@@ -5,7 +5,6 @@
 package com.appsnipp.education.ui.adapter;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -21,8 +20,8 @@ import java.util.List;
 
 public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAdapter.ViewHolder> {
 
-    private List<MatchCourse> mData;
-    private MatchCourseClickListener matchCourseClickListener;
+    private final List<MatchCourse> mData;
+    private final MatchCourseClickListener matchCourseClickListener;
     public MatchesCoursesAdapter(List<MatchCourse> mData, MatchCourseClickListener listener) {
         this.mData = mData;
         this.matchCourseClickListener = listener;
@@ -51,12 +50,7 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
 
         holder.setBind(mData.get(position));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                matchCourseClickListener.onScrollPagerItemClick(mData.get(position), holder.itemCardBinding.image);
-            }
-        });
+        holder.itemView.setOnClickListener(v -> matchCourseClickListener.onScrollPagerItemClick(mData.get(holder.getAdapterPosition()), holder.itemCardBinding.image));
 
     }
 

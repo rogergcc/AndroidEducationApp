@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
         //endregion
 
         startMainActivity();
-        finish();
+//        finish();
 
     }
 

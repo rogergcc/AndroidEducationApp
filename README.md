@@ -20,11 +20,6 @@ This module use the following libraries:
 - [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
 - [Google Material Design](https://material.io/develop/android/docs/getting-started)
 
-
-- **Images**
-	- Glide 
-	- Circleimageview
-
   
  ## 📸 Screenshots
 

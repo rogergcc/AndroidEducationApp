@@ -10,26 +10,17 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ui.menucourses.CoursesStaggedFragment">
-
     <androidx.core.widget.NestedScrollView
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:background="#ffba60"
         >
-
-
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ffba60"
-
             android:orientation="vertical"
-
             >
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,61 +39,54 @@
                     android:layout_marginTop="30dp"
                     android:layout_weight="40"
                     android:fontFamily="@font/bariol_bold"
-                    android:text="Hey, What would you like to learn today ?"
+                    android:text="@string/title_hey"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="30sp">
-
-
-                </TextView>
+                    android:textSize="30sp" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 
                     android:layout_weight="60"
-                    android:src="@drawable/refer_icon">
-
-                </ImageView>
+                    android:src="@drawable/refer_icon"
+                    android:contentDescription="TODO" />
             </LinearLayout>
 
             <EditText
                 android:id="@+id/edt_search"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"
-
-                android:maxLines="1"
-                android:singleLine="true"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/horizontal_dashboard"
-
                 android:layout_marginTop="@dimen/normalPadding"
+
                 android:layout_marginRight="@dimen/horizontal_dashboard"
-
+                android:autofillHints="username"
                 android:background="@drawable/container_search"
+                android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"
+
                 android:drawableStart="@drawable/ic_search_black_24dp"
-
-
-
                 android:drawablePadding="@dimen/drawable_left"
-                android:fontFamily="@font/bariol_regular"
 
+                android:fontFamily="@font/bariol_regular"
                 android:gravity="center_vertical"
+
+
+                android:hint="@string/edt_search"
+                android:imeOptions="actionSearch"
+
+                android:inputType="text"
+                android:maxLines="1"
                 android:paddingLeft="@dimen/normalPadding"
                 android:paddingTop="@dimen/vertical_search"
                 android:paddingRight="@dimen/normalPadding"
+
                 android:paddingBottom="@dimen/vertical_search"
+                android:singleLine="true"
+                android:textColor="?attr/colorPrimaryDark"
 
-                android:hint="Search Here"
-                android:textColorHint="@color/frutorial_title"
-                android:textColor="@color/colorPrimaryDark"
-
-                android:textSize="14sp">
-
-            </EditText>
+                android:textColorHint="@color/color_hint"
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -1,9 +1,14 @@
 package com.appsnipp.education;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -84,6 +89,8 @@ public class MainActivity extends AppCompatActivity
 
         if (new DarkModePrefManager(this).isNightMode()) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -109,6 +116,13 @@ public class MainActivity extends AppCompatActivity
         //endregion
 
         setupNavigation();
+
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@Nullable View parent, @NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
+        return super.onCreateView(parent, name, context, attrs);
 
     }
 
@@ -157,8 +171,10 @@ public class MainActivity extends AppCompatActivity
             DarkModePrefManager darkModePrefManager = new DarkModePrefManager(this);
             darkModePrefManager.setDarkMode(!darkModePrefManager.isNightMode());
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            recreate();
+//            recreate(); //recreate activity for changes to take effect => show Log Error Xiaomi Device
 
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
+            overridePendingTransition(0, 0);
         }
 
 //        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

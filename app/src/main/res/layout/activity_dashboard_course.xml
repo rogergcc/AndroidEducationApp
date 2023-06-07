@@ -6,24 +6,18 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#ffba60"
-    >
+    android:background="#ffba60">
 
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffba60"
-
         android:orientation="vertical"
-
         >
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +26,6 @@
             android:paddingLeft="@dimen/horizontal_dashboard"
             android:paddingTop="@dimen/fab_margin"
             android:paddingRight="@dimen/horizontal_dashboard"
-
 
             android:weightSum="100">
 
@@ -44,19 +37,14 @@
                 android:fontFamily="@font/bariol_bold"
                 android:text="Hey, What would you like to learn today ?"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="30sp">
-
-
-            </TextView>
+                android:textSize="30sp"/>
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_weight="60"
-                android:src="@drawable/refer_icon">
-
-            </ImageView>
+                android:src="@drawable/refer_icon"
+                android:contentDescription="TODO" />
         </LinearLayout>
 
         <TextView
@@ -71,7 +59,6 @@
             android:background="@drawable/container_search"
             android:drawableStart="@drawable/ic_search_black_24dp"
 
-            android:drawableLeft="@drawable/ic_search_black_24dp"
 
             android:drawablePadding="@dimen/drawable_left"
             android:fontFamily="@font/bariol_regular"
@@ -85,9 +72,7 @@
             android:text="Search Here"
             android:textColor="@color/bottomNavigationTextColor"
 
-            android:textSize="14sp">
-
-        </TextView>
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -272,7 +257,7 @@
                             android:layout_height="wrap_content"
 
                             android:layout_marginTop="@dimen/horizontal_card"
-                            android:layout_marginRight="@dimen/horizontal_card"
+                            android:layout_marginEnd="@dimen/horizontal_card"
                             android:layout_marginBottom="@dimen/horizontal_card"
                             android:layout_weight="1"
                             android:clickable="true"
@@ -303,7 +288,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
 
 
                                     android:fontFamily="@font/bariol_bold"
@@ -317,7 +302,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_subtitle_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
                                     android:layout_marginBottom="@dimen/normalPadding"
 
                                     android:fontFamily="@font/bariol_bold"
@@ -366,7 +351,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
 
 
                                     android:fontFamily="@font/bariol_bold"
@@ -380,7 +365,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_subtitle_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
                                     android:layout_marginBottom="@dimen/normalPadding"
 
                                     android:fontFamily="@font/bariol_bold"
@@ -398,7 +383,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/horizontal_dashboard"
                         android:layout_marginTop="@dimen/normalPadding"
-                        android:layout_marginRight="@dimen/horizontal_dashboard"
+                        android:layout_marginEnd="@dimen/horizontal_dashboard"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:weightSum="2">
@@ -410,7 +395,7 @@
                             android:layout_height="wrap_content"
 
                             android:layout_marginTop="@dimen/horizontal_card"
-                            android:layout_marginRight="@dimen/horizontal_card"
+                            android:layout_marginEnd="@dimen/horizontal_card"
                             android:layout_marginBottom="@dimen/horizontal_card"
                             android:layout_weight="1"
                             android:clickable="true"
@@ -441,7 +426,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
 
 
                                     android:fontFamily="@font/bariol_bold"
@@ -455,7 +440,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_subtitle_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
                                     android:layout_marginBottom="@dimen/normalPadding"
 
                                     android:fontFamily="@font/bariol_bold"
@@ -504,7 +489,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
 
 
                                     android:fontFamily="@font/bariol_bold"
@@ -518,7 +503,7 @@
                                     android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_subtitle_card"
 
-                                    android:layout_marginRight="@dimen/normalPadding"
+                                    android:layout_marginEnd="@dimen/normalPadding"
                                     android:layout_marginBottom="@dimen/normalPadding"
 
                                     android:fontFamily="@font/bariol_bold"

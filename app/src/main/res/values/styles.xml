@@ -9,7 +9,7 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:fontFamily">@font/calibri</item>
-        <item name="android:windowBackground">@color/frutorial_title</item>
+        <item name="android:windowBackground">@color/color_hint</item>
         <item name="android:textColorPrimary">@color/colorPrimary</item>
         <item name="android:windowContentTransitions">true</item>
 

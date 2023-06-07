@@ -3,19 +3,14 @@
   -->
 
 <androidx.core.widget.NestedScrollView
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#ffba60"
     >
-
-
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffba60"
@@ -55,9 +50,7 @@
 
                 android:layout_weight="60"
                 android:src="@drawable/refer_icon"
-                android:contentDescription="@null">
-
-            </ImageView>
+                android:contentDescription="@null" />
         </LinearLayout>
 
         <EditText
@@ -76,8 +69,6 @@
             android:layout_marginRight="@dimen/horizontal_dashboard"
             android:background="@drawable/container_search"
             android:drawableStart="@drawable/ic_search_black_24dp"
-
-
             android:drawablePadding="@dimen/drawable_left"
 
             android:gravity="center_vertical"
@@ -87,13 +78,11 @@
             android:paddingBottom="@dimen/vertical_search"
 
             android:hint="@string/edt_search"
-            android:textColorHint="@color/frutorial_title"
+            android:textColorHint="@color/color_hint"
             android:textColor="@color/colorPrimaryDark"
 
-            android:textSize="14sp"
-            android:autofillHints="username">
-
-        </EditText>
+            android:textSize="15sp"
+            android:autofillHints="username" />
 
         <LinearLayout
             android:layout_width="match_parent"
