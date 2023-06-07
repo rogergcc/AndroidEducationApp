@@ -139,7 +139,7 @@
                 <TextView
                     android:layout_alignParentRight="true"
                     style="@style/viewParent"
-                    android:text="See All"
+                    android:text="@string/text_see_more"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/headerMoreTextSize"
                     android:textColor="@color/primaryTextColor"
@@ -182,7 +182,7 @@
                 <TextView
                     android:layout_alignParentRight="true"
                     style="@style/viewParent"
-                    android:text="See All"
+                    android:text="@string/text_see_more"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/headerMoreTextSize"
                     android:textColor="@color/primaryTextColor"
