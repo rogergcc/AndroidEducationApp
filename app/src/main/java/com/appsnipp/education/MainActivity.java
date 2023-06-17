@@ -26,7 +26,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    DarkModePrefManager darkModePrefManager;
     ActivityMainBinding binding;
     NavHostFragment navHostFragment;
     private BottomNavigationView bottomNavigationView;
@@ -87,18 +87,13 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (new DarkModePrefManager(this).isNightMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
 
         View view = binding.getRoot();
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(view);
-
+        setAppTheme();
         setSupportActionBar(binding.appBarMain.toolbar);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -116,6 +111,17 @@ public class MainActivity extends AppCompatActivity
         //endregion
 
         setupNavigation();
+
+    }
+
+    private void setAppTheme() {
+        darkModePrefManager = new DarkModePrefManager(this);
+        boolean isDarkModeEnabled = darkModePrefManager.isNightMode();
+        if (isDarkModeEnabled) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
 
     }
 
@@ -168,17 +174,30 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_dark_mode) {
             //code for setting dark mode
             //true for dark mode, false for day mode, currently toggling on each click
-            DarkModePrefManager darkModePrefManager = new DarkModePrefManager(this);
-            darkModePrefManager.setDarkMode(!darkModePrefManager.isNightMode());
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-//            recreate(); //recreate activity for changes to take effect => show Log Error Xiaomi Device
 
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
-            overridePendingTransition(0, 0);
+//            darkModePrefManager.setDarkMode(!darkModePrefManager.isNightMode());
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//            startActivity(new Intent(MainActivity.this, MainActivity.class));
+//            finish();
+//            overridePendingTransition(0, 0);
+
+            toggleDarkMode();
         }
 
 //        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         binding.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    // Método para cambiar el estado del modo oscuro
+    private void toggleDarkMode() {
+        boolean isDarkModeEnabled = darkModePrefManager.isNightMode();
+        darkModePrefManager.setDarkMode(!isDarkModeEnabled);
+//        recreate();
+
+        startActivity(new Intent(MainActivity.this, MainActivity.class));
+        finish();
+        overridePendingTransition(0, 0);
+
     }
 }

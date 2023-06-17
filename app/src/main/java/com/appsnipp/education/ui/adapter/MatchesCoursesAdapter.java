@@ -32,8 +32,6 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-//        View v = inflater.inflate(R.layout.item_shop_card, parent, false);
-//        return new ViewHolder(v);
 
         ItemShopCardBinding itemCardBinding = ItemShopCardBinding.inflate(inflater,parent,false);
         return new MatchesCoursesAdapter.ViewHolder(itemCardBinding);
@@ -41,12 +39,6 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-//        MatchCourse matchCourseDatos = mData.get(position);
-//        Glide.with(holder.itemView.getContext())
-//                .load(matchCourseDatos.getImageResource())
-////                .transform(new CenterCrop(), new RoundedCorners(24))
-////                .transform(new RoundedCorners(40))
-//                .into(holder.itemCardBinding.image);
 
         holder.setBind(mData.get(position));
 
@@ -60,17 +52,6 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
-//        private ImageView image;
-//        private TextView tv_titulo;
-//        private TextView tv_cantidad_cursos;
-//
-//        public ViewHolder(View itemView) {
-//            super(itemView);
-//            image = itemView.findViewById(R.id.image);
-//            tv_titulo = itemView.findViewById(R.id.tv_titulo);
-//            tv_cantidad_cursos = itemView.findViewById(R.id.tv_cantidad_cursos);
-//        }
 
         ItemShopCardBinding itemCardBinding;
         public ViewHolder(@NonNull ItemShopCardBinding cardBinding) {

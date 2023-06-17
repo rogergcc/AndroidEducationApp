@@ -8,9 +8,8 @@
         android:id="@+id/card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        card_view:cardElevation="1dp"
-        card_view:cardCornerRadius="7dp"
         card_view:cardBackgroundColor="@color/whiteBodyColor"
+        style="@style/CardViewStyle"
         card_view:cardPreventCornerOverlap="false"
         android:layout_margin="@dimen/card_margin">
 
@@ -24,25 +23,28 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:src="@drawable/frutorials"
+                android:contentDescription="@string/imageAcces"
                 android:scaleType="centerCrop" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/txtTitleTutorial"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/youtubeThubnail"
                 android:textColor="@color/color_hint"
                 android:layout_margin="5dp"
-                android:text="Sample"
+                android:text="Tutorial."
                 android:textSize="@dimen/frutorial_title" />
 
             <ImageView
+                android:layout_marginTop="-40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@android:drawable/ic_media_play"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/youtubeThubnail"
-                android:layout_marginTop="-40dp"/>
+                android:contentDescription="@string/imageAcces"
+                android:visibility="gone" />
 
 
         </RelativeLayout>

@@ -4,9 +4,6 @@
 
 package com.appsnipp.education.ui.helpers;
 
-/**
- * Created by kapil on 20/01/17.
- */
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -33,11 +30,11 @@ public class DarkModePrefManager {
 
     public void setDarkMode(boolean isFirstTime) {
         editor.putBoolean(IS_NIGHT_MODE, isFirstTime);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean isNightMode() {
-        return pref.getBoolean(IS_NIGHT_MODE, true);
+        return pref.getBoolean(IS_NIGHT_MODE, false);
     }
 
 }

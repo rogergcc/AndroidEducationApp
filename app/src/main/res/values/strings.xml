@@ -29,6 +29,12 @@
     <string name="title_popular_courses">Popular Courses</string>
     <string name="more">. .</string>
     <string name="hello_message">Hello roger</string>
-    <string name="percentage_course">60% Complete</string>
+    <string name="percentage_course">%1$d%% Completado</string>
+
+
     <string name="text_see_more">See All</string>
+    <string name="imageAcces">Image</string>
+    <string name="message_banner">Refer your friends and\n earn free course *</string>
+    <string name="title_drawer">Android developer</string>
+    <string name="emai_drawer">devhunter@movidev.com</string>
 </resources>
