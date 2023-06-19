@@ -25,14 +25,14 @@
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             android:maxWidth="100dp"
-            android:contentDescription="@string/imageAcces"
+            android:contentDescription="@string/imageAccess"
             android:src="@drawable/android_developer" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="App Developer"
+            android:text="@string/title_course"
             android:textColor="@color/whiteTextColor"
             android:textSize="16sp"
             android:textStyle="bold"

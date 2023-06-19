@@ -58,7 +58,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Continue to \nWebdeveloper Course"
+                                android:text="@string/title_home_message"
                                 android:textColor="@color/whiteBodyColor"
                                 android:textSize="17sp"
                                 android:textStyle="bold" />
@@ -93,7 +93,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:adjustViewBounds="true"
-                        android:contentDescription="@string/imageAcces"
+                        android:contentDescription="@string/imageAccess"
                         android:cropToPadding="true"
                         android:elevation="@dimen/card_image_elevation"
                         android:src="@drawable/header_image" />
@@ -129,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
-                        android:contentDescription="@string/imageAcces"
+                        android:contentDescription="@string/imageAccess"
                         android:src="@drawable/refer_icon" />
 
                 </RelativeLayout>
@@ -186,7 +186,7 @@
                         style="@style/viewParent.headerText"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:text="Tutorials" />
+                        android:text="@string/title_tutorials" />
 
                     <TextView
                         style="@style/viewParent"

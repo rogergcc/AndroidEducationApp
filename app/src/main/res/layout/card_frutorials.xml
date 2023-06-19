@@ -23,7 +23,7 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:src="@drawable/frutorials"
-                android:contentDescription="@string/imageAcces"
+                android:contentDescription="@string/imageAccess"
                 android:scaleType="centerCrop" />
 
             <TextView
@@ -33,7 +33,7 @@
                 android:layout_below="@id/youtubeThubnail"
                 android:textColor="@color/color_hint"
                 android:layout_margin="5dp"
-                android:text="Tutorial."
+                android:text="@string/title_tutorials"
                 android:textSize="@dimen/frutorial_title" />
 
             <ImageView
@@ -43,7 +43,7 @@
                 android:src="@android:drawable/ic_media_play"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/youtubeThubnail"
-                android:contentDescription="@string/imageAcces"
+                android:contentDescription="@string/imageAccess"
                 android:visibility="gone" />
 
 

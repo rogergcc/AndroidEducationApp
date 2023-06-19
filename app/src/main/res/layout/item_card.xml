@@ -1,29 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2020. rogergcc
   -->
-
-<androidx.cardview.widget.CardView android:id="@+id/card_item"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-
-
-
-
-
     android:clickable="true"
     android:focusable="true"
-
     android:foreground="?selectableItemBackground"
     app:cardBackgroundColor="@android:color/white"
-
     app:cardCornerRadius="@dimen/card_radius"
     app:cardElevation=".1dp"
-    app:cardPreventCornerOverlap="true"
-    >
+    app:cardPreventCornerOverlap="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,10 +25,10 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/img_card_height"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
             android:cropToPadding="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/course_design_thinking"
-            android:contentDescription="@string/app_name" />
+            android:src="@drawable/course_design_thinking" />
 
         <TextView
             android:id="@+id/stag_item_course"
@@ -48,8 +38,6 @@
             android:layout_marginTop="@dimen/top_text_card"
 
             android:layout_marginRight="@dimen/normalPadding"
-
-
             android:fontFamily="@font/bariol_bold"
             android:text="@string/title_topic_course"
             android:textColor="@color/darkTextColor"

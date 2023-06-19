@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021. rogergcc
+ * Copyright (c) 2021. roger
  */
 
 package com.appsnipp.education;
@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
-        //region REGION alternative desing xml
+        //region REGION alternative design xml
 
 //        final Handler handler = new Handler();
 //        handler.postDelayed(new Runnable() {

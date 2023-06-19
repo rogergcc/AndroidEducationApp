@@ -22,12 +22,10 @@ import java.util.List;
 
 public class CourseTopicsViewPager extends RecyclerView.Adapter<CourseTopicsViewPager.ViewHolder> {
     private final List<MatchCourse> mCoursesList;
-    private final Context mContext;
     private final MatchCourseClickListener matchCourseClickListener;
 
     public CourseTopicsViewPager(List<MatchCourse> mCoursesList, Context context, MatchCourseClickListener listener) {
-        mContext = context;
-        LayoutInflater mInflater = LayoutInflater.from(mContext);
+        LayoutInflater mInflater = LayoutInflater.from(context);
         this.mCoursesList = mCoursesList;
         this.matchCourseClickListener = listener;
     }

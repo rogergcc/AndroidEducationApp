@@ -49,7 +49,7 @@
 
                     android:layout_weight="60"
                     android:src="@drawable/refer_icon"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="@string/imageAccess" />
             </LinearLayout>
 
             <EditText
