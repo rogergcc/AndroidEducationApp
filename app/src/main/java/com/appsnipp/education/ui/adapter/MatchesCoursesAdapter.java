@@ -22,6 +22,7 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
 
     private final List<MatchCourse> mData;
     private final MatchCourseClickListener matchCourseClickListener;
+
     public MatchesCoursesAdapter(List<MatchCourse> mData, MatchCourseClickListener listener) {
         this.mData = mData;
         this.matchCourseClickListener = listener;
@@ -33,7 +34,7 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
-        ItemShopCardBinding itemCardBinding = ItemShopCardBinding.inflate(inflater,parent,false);
+        ItemShopCardBinding itemCardBinding = ItemShopCardBinding.inflate(inflater, parent, false);
         return new MatchesCoursesAdapter.ViewHolder(itemCardBinding);
     }
 
@@ -54,6 +55,7 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         ItemShopCardBinding itemCardBinding;
+
         public ViewHolder(@NonNull ItemShopCardBinding cardBinding) {
             super(cardBinding.getRoot());
             this.itemCardBinding = cardBinding;
@@ -61,7 +63,7 @@ public class MatchesCoursesAdapter extends RecyclerView.Adapter<MatchesCoursesAd
             //this.itemRecyclerMealBinding.
         }
 
-        void setBind(MatchCourse matchCourse){
+        void setBind(MatchCourse matchCourse) {
 
             itemCardBinding.tvTitulo.setText(matchCourse.getName());
             itemCardBinding.tvCantidadCursos.setText(matchCourse.getNumberOfCourses());
