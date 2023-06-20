@@ -98,7 +98,6 @@ public class MatchesCoursesFragment extends Fragment
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
 //                countTxtView.setText(String.format(Locale.ENGLISH,"%d/%d", position+1, matchCourseList.size()));
-
                 MyUtilsApp.showLog(TAG, String.format(Locale.ENGLISH, "%d/%d", position + 1, matchCourseList.size()));
             }
 
@@ -110,7 +109,6 @@ public class MatchesCoursesFragment extends Fragment
 //                int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
 
                 int color= ((int)(Math.random()*16777215)) | (0xFF << 24);
-
 
                 binding.containerConstraint.setBackgroundColor(color);
             }
