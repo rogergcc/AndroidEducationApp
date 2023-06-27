@@ -11,7 +11,7 @@
     <color name="darkTextColor">#020000</color>
     <color name="primaryTextColor">#019AE8</color>
     <color name="whiteTextColor">#fff</color>
-    <color name="frutorial_title">#4c4c4c</color>
+    <color name="color_hint">#4c4c4c</color>
 
     <color name="dashboard_subtitle">#B7B7CC</color>
 

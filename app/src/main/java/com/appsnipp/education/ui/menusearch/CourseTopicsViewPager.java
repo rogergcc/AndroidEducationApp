@@ -6,7 +6,6 @@ package com.appsnipp.education.ui.menusearch;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -22,14 +21,11 @@ import java.util.List;
 
 
 public class CourseTopicsViewPager extends RecyclerView.Adapter<CourseTopicsViewPager.ViewHolder> {
-    private LayoutInflater mInflater;
-    private List<MatchCourse> mCoursesList;
-    private Context mContext;
-    private MatchCourseClickListener matchCourseClickListener;
+    private final List<MatchCourse> mCoursesList;
+    private final MatchCourseClickListener matchCourseClickListener;
 
     public CourseTopicsViewPager(List<MatchCourse> mCoursesList, Context context, MatchCourseClickListener listener) {
-        mContext = context;
-        mInflater = LayoutInflater.from(mContext);
+        LayoutInflater mInflater = LayoutInflater.from(context);
         this.mCoursesList = mCoursesList;
         this.matchCourseClickListener = listener;
     }
@@ -37,11 +33,7 @@ public class CourseTopicsViewPager extends RecyclerView.Adapter<CourseTopicsView
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View view = mInflater.inflate(R.layout.item_pager_card, parent, false);
-//        return new ViewHolder(view);
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-//        View v = inflater.inflate(R.layout.item_shop_card, parent, false);
-//        return new ViewHolder(v);
 
         ItemPagerCardBinding itemPagerCardBinding = ItemPagerCardBinding.inflate(inflater, parent, false);
         return new ViewHolder(itemPagerCardBinding);
@@ -51,12 +43,7 @@ public class CourseTopicsViewPager extends RecyclerView.Adapter<CourseTopicsView
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.setBind(mCoursesList.get(position));
 
-        holder.binding.cardViewCourse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                matchCourseClickListener.onScrollPagerItemClick(mCoursesList.get(position), holder.binding.image);
-            }
-        });
+        holder.binding.cardViewCourse.setOnClickListener(v -> matchCourseClickListener.onScrollPagerItemClick(mCoursesList.get(holder.getAdapterPosition()), holder.binding.image));
     }
 
     @Override

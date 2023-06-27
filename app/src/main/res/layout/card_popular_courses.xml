@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minHeight="150dp"
     app:cardElevation="@dimen/card_itemcourse_elevation"
-    app:cardBackgroundColor="#FF402D"
+    android:layout_marginEnd="20dp"
     app:cardCornerRadius="16dp"
-    android:layout_marginRight="20dp"
+    app:cardBackgroundColor="@color/color5"
     android:layout_marginTop="20dp"
     android:layout_marginBottom="20dp">
 
@@ -25,13 +25,14 @@
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             android:maxWidth="100dp"
+            android:contentDescription="@string/imageAccess"
             android:src="@drawable/android_developer" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="App Developer"
+            android:text="@string/title_course"
             android:textColor="@color/whiteTextColor"
             android:textSize="16sp"
             android:textStyle="bold"

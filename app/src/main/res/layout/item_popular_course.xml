@@ -10,22 +10,17 @@
 
     <ImageView
         android:background="@drawable/play_course"
-
-        android:layout_marginTop="@dimen/top_text_subtitle_card"
-        android:layout_marginEnd="@dimen/top_text_subtitle_card"
-        android:layout_marginBottom="@dimen/top_text_subtitle_card"
-
-        android:padding="12dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/top_text_subtitle_card"
         android:src="@drawable/ic_play"
-
         android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        android:padding="@dimen/activity_vertical_margin"
+        android:contentDescription="@string/imageAccess" />
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginStart="@dimen/nav_header_vertical_spacing"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
         android:layout_width="match_parent"
-        android:layout_gravity="center"
         android:gravity="center_vertical"
         android:layout_height="match_parent">
 
@@ -33,14 +28,14 @@
             style="@style/viewParent.headerText"
             android:fontFamily="@font/bariol_regular"
             android:textSize="20sp"
-            android:text="Design Basic"
+            android:text="@string/title_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:fontFamily="@font/bariol_regular"
             android:textColor="@color/bottomNavigationTextColor"
-            android:text="Learn design basics."
+            android:text="@string/course_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

@@ -5,27 +5,27 @@
         android:id="@+id/navigationMenu"
         android:visible="false"
         android:icon="@android:drawable/ic_menu_sort_by_size"
-        android:title="Menu" />
+        android:title="@string/title_menu" />
 
     <item
         android:id="@+id/coursesStaggedFragment"
         android:icon="@drawable/ic_effort"
-        android:title="Courses" />
+        android:title="@string/title_courses" />
 
     <item
         android:id="@+id/homeCoursesFragment"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="@string/title_home" />
 
     <item
         android:id="@+id/matchesCoursesFragment"
         android:icon="@drawable/ic_search_black_24dp"
-        android:title="Search" />
+        android:title="@string/title_search" />
 
     <item
         android:visible="false"
         android:id="@+id/navigationMyProfile"
         android:icon="@drawable/ic_user_icon"
-        android:title="User" />
+        android:title="@string/title_user" />
 
 </menu>

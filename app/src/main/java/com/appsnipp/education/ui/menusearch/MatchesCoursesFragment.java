@@ -37,8 +37,6 @@ public class MatchesCoursesFragment extends Fragment
     private static final String TAG = "MatchesCoursesFragment";
     FragmentMatchesCoursesBinding binding;
     Context mcontext;
-    private List<MatchCourse> data;
-    private MyMatchesCourses myMatchesCourses;
 
     public MatchesCoursesFragment() {
         // Required empty public constructor
@@ -59,8 +57,8 @@ public class MatchesCoursesFragment extends Fragment
         View view = binding.getRoot();
         mcontext = this.getContext();
 
-        myMatchesCourses = MyMatchesCourses.get();
-        data = myMatchesCourses.getData();
+        MyMatchesCourses myMatchesCourses = MyMatchesCourses.get();
+        List<MatchCourse> data = myMatchesCourses.getData();
 
 
 //        int currentItem = getCurrentItem();
@@ -100,7 +98,6 @@ public class MatchesCoursesFragment extends Fragment
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
 //                countTxtView.setText(String.format(Locale.ENGLISH,"%d/%d", position+1, matchCourseList.size()));
-
                 MyUtilsApp.showLog(TAG, String.format(Locale.ENGLISH, "%d/%d", position + 1, matchCourseList.size()));
             }
 
@@ -113,7 +110,6 @@ public class MatchesCoursesFragment extends Fragment
 
                 int color= ((int)(Math.random()*16777215)) | (0xFF << 24);
 
-
                 binding.containerConstraint.setBackgroundColor(color);
             }
         });
@@ -121,13 +117,6 @@ public class MatchesCoursesFragment extends Fragment
 
 
     }
-
-//    @Override
-//    public void onCurrentItemChanged(@Nullable MatchesCoursesAdapter.ViewHolder viewHolder, int adapterPosition) {
-//
-//        MyUtilsApp.showLog(TAG, "ItemChanged adapterposition: " + adapterPosition);
-//
-//    }
 
     @Override
     public void onScrollPagerItemClick(MatchCourse courseCard, ImageView imageView) {

@@ -28,4 +28,22 @@
     <string name="title_courses_available">10 course available</string>
     <string name="title_popular_courses">Popular Courses</string>
     <string name="more">. .</string>
+    <string name="hello_message">Hello roger</string>
+    <string name="percentage_course">%1$d%% Completed</string>
+
+
+    <string name="text_see_more">See All</string>
+    <string name="imageAccess">Image</string>
+    <string name="message_banner">Refer your friends and\n earn free course *</string>
+    <string name="title_drawer">Android developer</string>
+    <string name="email_drawer">devhunter@movidev.com</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_courses">Courses</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_user">User</string>
+    <string name="title_tutorials">Tutorials</string>
+    <string name="title_home_message">Continue to \nWebdeveloper Course</string>
+    <string name="title_course">Design Basic</string>
+    <string name="course_details">Learn design basics.</string>
 </resources>
