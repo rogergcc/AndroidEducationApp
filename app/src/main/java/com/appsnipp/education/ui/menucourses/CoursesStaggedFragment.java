@@ -27,8 +27,7 @@ import com.appsnipp.education.ui.model.CourseCard;
 import java.util.ArrayList;
 
 
-public class CoursesStaggedFragment extends Fragment
-        implements CoursesItemClickListener {
+public class CoursesStaggedFragment extends Fragment implements CoursesItemClickListener {
 
     FragmentCoursesStaggedBinding binding;
     private Context mcontext;

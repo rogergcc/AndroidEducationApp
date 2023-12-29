@@ -1,24 +1,22 @@
-<androidx.cardview.widget.CardView android:layout_width="150dp"
+<androidx.cardview.widget.CardView style="@style/CardViewStyle"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minHeight="150dp"
-    app:cardElevation="@dimen/card_itemcourse_elevation"
-    android:layout_marginEnd="20dp"
-    app:cardCornerRadius="16dp"
     app:cardBackgroundColor="@color/color5"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp">
+    android:layout_width="150dp"
+    android:layout_margin="@dimen/card_margin">
 
-<!--    app:cardElevation="10dp"-->
+    <!--    app:cardElevation="10dp"-->
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center">
 
         <ImageView
+            android:id="@+id/imvCoursePhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -29,14 +27,17 @@
             android:src="@drawable/android_developer" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvCourseTitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/card_itemcourse_elevation"
             android:layout_gravity="center"
             android:text="@string/title_course"
             android:textColor="@color/whiteTextColor"
             android:textSize="16sp"
+
             android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp" />
 
     </LinearLayout>
 

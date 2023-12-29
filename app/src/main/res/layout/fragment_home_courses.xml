@@ -128,8 +128,8 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:cropToPadding="true"
                         android:contentDescription="@string/imageAccess"
+                        android:cropToPadding="true"
                         android:src="@drawable/refer_icon" />
 
                 </RelativeLayout>
@@ -152,7 +152,8 @@
                         android:text="@string/text_see_more"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="@dimen/headerMoreTextSize"
-                        android:textStyle="bold" />
+                        android:fontFamily="@font/futura_medium"
+                        android:textStyle="normal" />
 
                 </RelativeLayout>
 
@@ -168,11 +169,22 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <include layout="@layout/card_popular_courses" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPopularCourses"
 
-                        <include layout="@layout/card_popular_courses" />
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
-                        <include layout="@layout/card_popular_courses" />
+                            tools:itemCount="7"
+                            tools:listitem="@layout/card_popular_courses" />
+
+                        <!--                        <include layout="@layout/card_popular_courses" />-->
+
+                        <!--                        <include layout="@layout/card_popular_courses" />-->
+
+                        <!--                        <include layout="@layout/card_popular_courses" />-->
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -195,7 +207,8 @@
                         android:text="@string/text_see_more"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="@dimen/headerMoreTextSize"
-                        android:textStyle="bold" />
+                        android:fontFamily="@font/futura_medium"
+                        android:textStyle="normal" />
 
                 </RelativeLayout>
 

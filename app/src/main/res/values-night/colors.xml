@@ -6,4 +6,7 @@
     <color name="bottomNavigationBackground">#2A2E43</color>
 
     <color name="grey_light">#fff</color>
+
+    <color name="primaryTextColor">#44BBF8</color>
+
 </resources>
