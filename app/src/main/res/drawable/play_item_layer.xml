@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/outline_play_circle_24_disabled"
+
+        android:state_enabled="false">
+        <shape android:shape="oval">
+            <corners android:radius="10dp" />
+            <solid android:color="#8DD11414" />
+        </shape>
+
+    </item>
+    <item android:state_pressed="true" android:drawable="@drawable/outline_play_circle_24">
+        <color android:color="#8DD11414" />
+
+        <!--        <bitmap app:srcCompat="@drawable/ic_icon8_strategy_mage" />-->
+    </item>
+</selector>

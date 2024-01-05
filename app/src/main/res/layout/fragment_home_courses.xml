@@ -159,35 +159,16 @@
 
                 <!--remove the below layout with recycler view, use card poplar courses as model for design-->
 
-                <HorizontalScrollView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPopularCourses"
+
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rvPopularCourses"
-
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-                            tools:itemCount="7"
-                            tools:listitem="@layout/card_popular_courses" />
-
-                        <!--                        <include layout="@layout/card_popular_courses" />-->
-
-                        <!--                        <include layout="@layout/card_popular_courses" />-->
-
-                        <!--                        <include layout="@layout/card_popular_courses" />-->
-
-                    </LinearLayout>
-                </HorizontalScrollView>
+                    tools:itemCount="7"
+                    tools:listitem="@layout/card_popular_courses" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -214,7 +195,6 @@
 
                 <!--remove the below layout with recycler view, use card poplar courses as model for design-->
 
-
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -226,14 +206,16 @@
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
-                        <include layout="@layout/card_frutorials" />
+                        <include layout="@layout/item_tutorial" />
 
-                        <include layout="@layout/card_frutorials" />
+                        <include layout="@layout/item_tutorial" />
 
-                        <include layout="@layout/card_frutorials" />
+                        <include layout="@layout/item_tutorial" />
 
                     </LinearLayout>
                 </HorizontalScrollView>
+
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
