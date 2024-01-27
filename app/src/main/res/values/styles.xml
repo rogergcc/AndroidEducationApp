@@ -100,7 +100,7 @@
 
     <style name="parent.contentLayout">
         <item name="android:background">@color/contentBodyColor</item>
-<!--        <item name="android:padding">@dimen/normalPadding</item>-->
+        <!--        <item name="android:padding">@dimen/normalPadding</item>-->
     </style>
 
     <style name="viewParent.headerText">
@@ -109,6 +109,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="viewParent.SubtitleText">
+        <item name="android:textColor">@color/contentTextColor</item>
+        <item name="android:textSize">@dimen/text_title_15</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="Animation.WindowSlideUpDown" parent="@android:style/Animation.Activity">
         <item name="android:windowEnterAnimation">@anim/slide_up</item>

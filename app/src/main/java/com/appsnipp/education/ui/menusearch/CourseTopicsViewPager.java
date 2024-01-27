@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.appsnipp.education.databinding.ItemPagerCardBinding;
 import com.appsnipp.education.ui.listeners.MatchCourseClickListener;
 import com.appsnipp.education.ui.model.MatchCourse;
+import com.appsnipp.education.ui.utils.AppLogger;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 
@@ -66,6 +67,7 @@ public class CourseTopicsViewPager extends RecyclerView.Adapter<CourseTopicsView
             binding.tvTitulo.setText(matchCourse.getName());
             binding.tvCantidadCursos.setText(matchCourse.getNumberOfCourses());
 
+            AppLogger.e("CourseTopicsViewPager setBind: Before GLide ");
             Glide.with(itemView.getContext())
                     .load(matchCourse.getImageResource())
 //                .transform(new CenterCrop(), new RoundedCorners(24))

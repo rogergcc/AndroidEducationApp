@@ -20,6 +20,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.appsnipp.education.databinding.ActivityMainBinding;
 import com.appsnipp.education.ui.helpers.BottomNavigationBehavior;
 import com.appsnipp.education.ui.helpers.DarkModePrefManager;
+import com.appsnipp.education.ui.utils.AppLogger;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -191,6 +192,7 @@ public class MainActivity extends AppCompatActivity
 
     // Método para cambiar el estado del modo oscuro
     private void toggleDarkMode() {
+        AppLogger.d("toggleDarkMode init");
         boolean isDarkModeEnabled = darkModePrefManager.isNightMode();
         darkModePrefManager.setDarkMode(!isDarkModeEnabled);
 //        recreate();

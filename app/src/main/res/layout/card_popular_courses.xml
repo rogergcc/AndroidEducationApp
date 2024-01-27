@@ -15,16 +15,14 @@
         android:orientation="vertical"
         android:layout_gravity="center">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imvCoursePhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:maxWidth="100dp"
-            android:contentDescription="@string/imageAccess"
-            android:src="@drawable/android_developer" />
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/android_developer" />
 
         <TextView
             android:id="@+id/tvCourseTitle"

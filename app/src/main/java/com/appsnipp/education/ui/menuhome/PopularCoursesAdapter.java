@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.appsnipp.education.databinding.CardPopularCoursesBinding;
 import com.appsnipp.education.ui.model.CourseCard;
+import com.appsnipp.education.ui.utils.AppLogger;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -77,6 +78,7 @@ public class PopularCoursesAdapter extends RecyclerView.Adapter<PopularCoursesAd
         }
 
         void bind(@NonNull CourseCard data) {
+            AppLogger.e("PopularCoursesAdapter setBind: Before GLide ");
             Glide.with(itemView.getContext())
 //            Glide.with(itemListaInicioBinding.getRoot())
                     .load(data.getImageCourse())
