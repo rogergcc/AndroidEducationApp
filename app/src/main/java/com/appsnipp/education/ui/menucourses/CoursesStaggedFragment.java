@@ -20,9 +20,9 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.FragmentCoursesStaggedBinding;
-import com.appsnipp.education.ui.helpers.GridSpacingItemDecoration;
 import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
+import com.appsnipp.education.ui.utils.helpers.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
 

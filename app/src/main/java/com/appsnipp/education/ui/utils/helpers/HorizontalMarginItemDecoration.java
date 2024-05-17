@@ -1,4 +1,8 @@
-package com.appsnipp.education.ui.helpers;
+/*
+ * Copyright (c) 2024. rogergcc
+ */
+
+package com.appsnipp.education.ui.utils.helpers;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -9,8 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class HorizontalMarginItemDecoration extends RecyclerView.ItemDecoration {
-    private int marginLeft;
-    private int mMargin;
+    private final int marginLeft;
+    private final int mMargin;
 
     public HorizontalMarginItemDecoration(Context context, @DimenRes int margin, @DimenRes int mleft) {
         mMargin = (int) context.getResources().getDimension(margin);

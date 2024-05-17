@@ -18,9 +18,9 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import com.appsnipp.education.databinding.ActivityMainBinding;
-import com.appsnipp.education.ui.helpers.BottomNavigationBehavior;
-import com.appsnipp.education.ui.helpers.DarkModePrefManager;
 import com.appsnipp.education.ui.utils.AppLogger;
+import com.appsnipp.education.ui.utils.helpers.BottomNavigationBehavior;
+import com.appsnipp.education.ui.utils.helpers.DarkModePrefManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 

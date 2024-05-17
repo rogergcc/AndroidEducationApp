@@ -4,9 +4,13 @@
 
 package com.appsnipp.education.ui.menusearch;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
+import com.appsnipp.education.data.CoursesRepository;
 import com.appsnipp.education.ui.model.MatchCourse;
 
 import java.util.List;
@@ -15,18 +19,42 @@ import java.util.List;
  * Created on September.
  * year 2021 .
  */
-class MyCoursesViewModel extends ViewModel {
 
-    MutableLiveData<List<MatchCourse>> mLiveDataQrList;
-    private MyQrListRepository repository;
+public class MyCoursesViewModel extends ViewModel {
+    private final MutableLiveData<List<MatchCourse>> mLiveDataQrList;
+    private final CoursesRepository repository;
 
-    public MyCoursesViewModel(MyQrListRepository repository) {
+    public MyCoursesViewModel(CoursesRepository repository) {
         this.repository = repository;
-        mLiveDataQrList = new MutableLiveData();
+        this.mLiveDataQrList = new MutableLiveData<>();
+    }
+
+
+    public LiveData<List<MatchCourse>> getLiveDataQrList() {
+        return mLiveDataQrList;
     }
 
     public void getDataQrListVM() {
+        List<MatchCourse> data = repository.getData();
+        mLiveDataQrList.postValue(data);
+    }
 
-        repository.getData(mLiveDataQrList);
+
+}
+
+class MyCoursesViewModelFactory implements ViewModelProvider.Factory {
+    private final CoursesRepository repository;
+
+    public MyCoursesViewModelFactory(CoursesRepository repository) {
+        this.repository = repository;
+    }
+
+    @NonNull
+    @Override
+    public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+        if (modelClass.isAssignableFrom(MyCoursesViewModel.class)) {
+            return (T) new MyCoursesViewModel(repository);
+        }
+        throw new IllegalArgumentException("Unknown ViewModel class");
     }
 }
