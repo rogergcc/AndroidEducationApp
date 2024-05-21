@@ -22,7 +22,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.appsnipp.education.R;
 import com.appsnipp.education.data.CoursesRepository;
 import com.appsnipp.education.databinding.FragmentMatchesCoursesBinding;
-import com.appsnipp.education.ui.listeners.MatchCourseClickListener;
+import com.appsnipp.education.ui.listeners.ItemClickListener;
 import com.appsnipp.education.ui.model.MatchCourse;
 import com.appsnipp.education.ui.utils.AppLogger;
 import com.appsnipp.education.ui.utils.MyUtilsApp;
@@ -34,8 +34,7 @@ import java.util.Locale;
 
 public class MatchesCoursesFragment extends Fragment
         implements
-//        DiscreteScrollView.OnItemChangedListener<MatchesCoursesAdapter.ViewHolder>
-        MatchCourseClickListener {
+        ItemClickListener<MatchCourse> {
 
     private static final String TAG = "MatchesCoursesFragment";
     FragmentMatchesCoursesBinding binding;
@@ -156,9 +155,9 @@ public class MatchesCoursesFragment extends Fragment
 
 
     @Override
-    public void onScrollPagerItemClick(MatchCourse courseCard, ImageView imageView) {
-
-        AppLogger.d("[" + TAG + "] onScrollPagerItemClick() " + courseCard);
+    public void onItemClick(MatchCourse item, ImageView imageView) {
+        AppLogger.d("[" + TAG + "] onScrollPagerItemClick() " + item);
+        MyUtilsApp.showToast(requireContext(), item.getNumberOfCourses());
         //Now, this has dynamic data from myMatchesCourses.getData();.
         //Could use the Id as unique value for go to new activity
 //        Intent intentGetStarted;

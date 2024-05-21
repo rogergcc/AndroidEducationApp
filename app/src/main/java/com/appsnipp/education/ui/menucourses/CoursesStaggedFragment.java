@@ -20,14 +20,16 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.FragmentCoursesStaggedBinding;
-import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
+import com.appsnipp.education.ui.listeners.ItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
+import com.appsnipp.education.ui.utils.MyUtilsApp;
 import com.appsnipp.education.ui.utils.helpers.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
 
 
-public class CoursesStaggedFragment extends Fragment implements CoursesItemClickListener {
+public class CoursesStaggedFragment extends Fragment
+        implements ItemClickListener<CourseCard> {
 
     FragmentCoursesStaggedBinding binding;
     private Context mcontext;
@@ -114,8 +116,15 @@ public class CoursesStaggedFragment extends Fragment implements CoursesItemClick
         //...perform search
     }
 
+//    @Override
+//    public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
+//        Toast.makeText(mcontext, courseCard.getCourseTitle(), Toast.LENGTH_LONG).show();
+//    }
+
     @Override
-    public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
-        Toast.makeText(mcontext, courseCard.getCourseTitle(), Toast.LENGTH_LONG).show();
+    public void onItemClick(CourseCard item, ImageView imageView) {
+        String quantityCourseMessage = item.getQuantityCourses() + " courses";
+        MyUtilsApp.showToast(requireContext(), quantityCourseMessage);
+
     }
 }
