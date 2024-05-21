@@ -32,57 +32,6 @@ public class MainActivity extends AppCompatActivity
     NavHostFragment navHostFragment;
     private BottomNavigationView bottomNavigationView;
 
-    //region REGION OLDER WAY BottomNavigation
-//    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-//            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-//
-//        @Override
-//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//            Fragment fragment;
-//            Fragment fragmentoGenerico = null;
-//            Intent intentGetStarted;
-//            switch (item.getItemId()) {
-//                case R.id.navigationMyProfile:
-////                    return true;
-//                    break;
-//                case R.id.navigationMyCourses:
-//                    //https://dribbble.com/shots/6482664-Design-Course-App-UI
-//                    fragmentoGenerico = new CoursesStaggedFragment();
-//                    break;
-//                case R.id.navigationHome:
-//                    fragmentoGenerico = new HomeCoursesFragment();
-//                    break;
-//                case R.id.navigationSearch:
-//
-//                    fragmentoGenerico = new MatchesCoursesFragment();
-//                    break;
-//                case R.id.navigationMenu:
-//                    binding.drawerLayout.openDrawer(GravityCompat.START);
-//                    break;
-//            }
-//            if (fragmentoGenerico != null) {
-//                loadFragment(fragmentoGenerico);
-//            }
-//
-//            setTitle(item.getTitle());
-//            return true;
-//        }
-//    };
-
-//    private void loadFragment(Fragment fragment) {
-//        // load fragment
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//        transaction.setCustomAnimations(
-//                R.anim.fragment_fade_enter,  // enter
-//                R.anim.fragment_fade_exit,  // exit
-//                R.anim.fragment_fade_enter,   // popEnter
-//                R.anim.fragment_fade_exit  // popExit
-//        );
-//        transaction.replace(R.id.container_frame, fragment);
-//        transaction.addToBackStack(null);
-//        transaction.commit();
-//    }
-    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,12 +53,6 @@ public class MainActivity extends AppCompatActivity
 
         binding.navView.setNavigationItemSelectedListener(this);
 
-        //region REGION OLD METHOD BOTTOM NAVIGATION
-//        binding.appBarMain.bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-//        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) binding.appBarMain.bottomNavigationView.getLayoutParams();
-//        layoutParams.setBehavior(new BottomNavigationBehavior());
-//        binding.appBarMain.bottomNavigationView.setSelectedItemId(R.id.navigationHome);
-        //endregion
 
         setupNavigation();
 
