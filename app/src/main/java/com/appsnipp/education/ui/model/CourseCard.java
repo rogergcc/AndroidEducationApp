@@ -6,47 +6,48 @@ package com.appsnipp.education.ui.model;
 
 public class CourseCard {
 
-    private int Id;
-    private int imageCourse;
-    private String courseTitle;
+    private int id;
+    private String title;
     private String quantityCourses;
+    private int imageResource;
+
     private String urlCourse;
 
-    public CourseCard(int id, int imageCourse, String courseTitle, String quantityCourses) {
-        Id = id;
-        this.imageCourse = imageCourse;
-        this.courseTitle = courseTitle;
+    public CourseCard(int id, String title, String quantityCourses, int imageResource) {
+        this.id = id;
+        this.title = title;
         this.quantityCourses = quantityCourses;
+        this.imageResource = imageResource;
     }
-
-    public CourseCard(int imageCourse, String courseTitle, String quantityCourses) {
-        this.imageCourse = imageCourse;
-        this.courseTitle = courseTitle;
-        this.quantityCourses = quantityCourses;
-    }
+//    public CourseCard(int id, String title, String quantityCourses, int imageResource) {
+//        this.id = id;
+//        this.title = title;
+//        this.quantityCourses = quantityCourses;
+//        this.imageResource = imageResource;
+//    }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public int getImageCourse() {
-        return imageCourse;
+        return imageResource;
     }
 
     public void setImageCourse(int imageCourse) {
-        this.imageCourse = imageCourse;
+        this.imageResource = imageCourse;
     }
 
     public String getCourseTitle() {
-        return courseTitle;
+        return title;
     }
 
     public void setCourseTitle(String courseTitle) {
-        this.courseTitle = courseTitle;
+        this.title = courseTitle;
     }
 
     public String getQuantityCourses() {

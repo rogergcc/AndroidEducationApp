@@ -14,9 +14,9 @@ import java.util.List;
  * year 2024 .
  */
 public class CoursesRepository {
-    public List<MatchCourse> getData() {
+    public List<MatchCourse> matchedCourses() {
         try {
-            return MyMatchesCourses.getInstance().getData();
+            return MatchesCoursesFake.getInstance().matchedCourses();
         } catch (Exception ex) {
             // Maneja la excepción aquí
             return Collections.emptyList();

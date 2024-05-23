@@ -66,13 +66,13 @@ public class MatchesCoursesFragment extends Fragment
         super.onViewCreated(view, savedInstanceState);
 
 
-        MyCoursesViewModel viewModel = new ViewModelProvider(this,
+        CoursesViewModel viewModel = new ViewModelProvider(this,
                 new MyCoursesViewModelFactory(
-                        new CoursesRepository())).get(MyCoursesViewModel.class);
+                        new CoursesRepository())).get(CoursesViewModel.class);
 
-        viewModel.getDataQrListVM();
+        viewModel.fetchMatchedCourses();
 
-        viewModel.getLiveDataQrList().observe(getViewLifecycleOwner(), matchCourses -> {
+        viewModel.matchedCourses().observe(getViewLifecycleOwner(), matchCourses -> {
             setupViewpager(1, matchCourses);
         });
 

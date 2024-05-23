@@ -14,13 +14,16 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.appsnipp.education.R;
+import com.appsnipp.education.data.CourseCardsFake;
 import com.appsnipp.education.databinding.FragmentHomeCoursesBinding;
 import com.appsnipp.education.ui.model.CourseCard;
+import com.appsnipp.education.ui.utils.MyUtilsApp;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeCoursesFragment extends Fragment implements PopularCoursesAdapter.ClickListener {
+public class HomeCoursesFragment extends Fragment
+        implements PopularCoursesAdapter.ClickListener {
 
     FragmentHomeCoursesBinding binding;
 
@@ -49,10 +52,7 @@ public class HomeCoursesFragment extends Fragment implements PopularCoursesAdapt
         binding.rvPopularCourses.setAdapter(popularCoursesAdapter);
 
         List<CourseCard> courseCardsList = new ArrayList<>();
-        courseCardsList.add(new CourseCard(1, R.drawable.education_1, "Desing Thinking", "19 courses"));
-        courseCardsList.add(new CourseCard(2, R.drawable.education_2, "Software Development", "14 courses"));
-        courseCardsList.add(new CourseCard(3, R.drawable.education_5, "Marketing", "24 courses"));
-        courseCardsList.add(new CourseCard(4, R.drawable.education_4, "Security Expert", "18 courses"));
+        courseCardsList = CourseCardsFake.getInstance().getCourseCards();
 
         popularCoursesAdapter.setListDataItems(courseCardsList);
     }
@@ -69,6 +69,6 @@ public class HomeCoursesFragment extends Fragment implements PopularCoursesAdapt
 
     @Override
     public void onClick(CourseCard view, int position) {
-
+        MyUtilsApp.showToast(requireContext(), view.getCourseTitle());
     }
 }

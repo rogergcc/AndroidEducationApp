@@ -20,23 +20,22 @@ import java.util.List;
  * year 2021 .
  */
 
-public class MyCoursesViewModel extends ViewModel {
-    private final MutableLiveData<List<MatchCourse>> mLiveDataQrList;
+public class CoursesViewModel extends ViewModel {
+    private final MutableLiveData<List<MatchCourse>> mMatchedCourses;
     private final CoursesRepository repository;
 
-    public MyCoursesViewModel(CoursesRepository repository) {
+    public CoursesViewModel(CoursesRepository repository) {
         this.repository = repository;
-        this.mLiveDataQrList = new MutableLiveData<>();
+        this.mMatchedCourses = new MutableLiveData<>();
     }
 
-
-    public LiveData<List<MatchCourse>> getLiveDataQrList() {
-        return mLiveDataQrList;
+    public LiveData<List<MatchCourse>> matchedCourses() {
+        return mMatchedCourses;
     }
 
-    public void getDataQrListVM() {
-        List<MatchCourse> data = repository.getData();
-        mLiveDataQrList.postValue(data);
+    public void fetchMatchedCourses() {
+        List<MatchCourse> data = repository.matchedCourses();
+        mMatchedCourses.postValue(data);
     }
 
 
@@ -52,8 +51,8 @@ class MyCoursesViewModelFactory implements ViewModelProvider.Factory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        if (modelClass.isAssignableFrom(MyCoursesViewModel.class)) {
-            return (T) new MyCoursesViewModel(repository);
+        if (modelClass.isAssignableFrom(CoursesViewModel.class)) {
+            return (T) new CoursesViewModel(repository);
         }
         throw new IllegalArgumentException("Unknown ViewModel class");
     }

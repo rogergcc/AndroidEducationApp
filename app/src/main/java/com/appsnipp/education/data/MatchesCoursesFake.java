@@ -11,22 +11,22 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class MyMatchesCourses {
+public class MatchesCoursesFake {
 
-    private static MyMatchesCourses instance;
+    private static MatchesCoursesFake instance;
 
-    private MyMatchesCourses() {
+    private MatchesCoursesFake() {
     }
 
-    public static synchronized MyMatchesCourses getInstance() {
+    public static synchronized MatchesCoursesFake getInstance() {
         if (instance == null) {
-            instance = new MyMatchesCourses();
+            instance = new MatchesCoursesFake();
         }
         return instance;
     }
 
 
-    public List<MatchCourse> getData() {
+    public List<MatchCourse> matchedCourses() {
         return Arrays.asList(
                 new MatchCourse(1, "Digital Marketing", "12 courses available", R.drawable.education_2),
                 new MatchCourse(2, "Business", "50 courses available", R.drawable.education_3),
@@ -36,4 +36,6 @@ public class MyMatchesCourses {
                 new MatchCourse(6, "Mobile", "145 courses available", R.drawable.education_6)
         );
     }
+
+
 }
