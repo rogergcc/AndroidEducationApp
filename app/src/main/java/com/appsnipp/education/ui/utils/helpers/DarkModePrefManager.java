@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020. rogergcc
+ * Copyright (c) 2024. rogergcc
  */
 
-package com.appsnipp.education.ui.helpers;
+package com.appsnipp.education.ui.utils.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;

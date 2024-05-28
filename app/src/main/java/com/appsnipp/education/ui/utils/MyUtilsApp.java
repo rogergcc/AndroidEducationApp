@@ -5,7 +5,6 @@
 package com.appsnipp.education.ui.utils;
 
 import android.content.Context;
-import android.util.Log;
 import android.widget.Toast;
 
 public final class MyUtilsApp {
@@ -14,7 +13,4 @@ public final class MyUtilsApp {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
-    public static void showLog(String TAG,String message){
-        Log.d(TAG, "showLog: "+ message);
-    }
 }

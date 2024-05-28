@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/drawable/container_search.xml" value="0.245" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.245" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/layout/activity_course_stagged.xml" value="0.15081521739130435" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/layout/activity_dashboard_course.xml" value="0.22" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/layout/dashboard_base.xml" value="0.21666666666666667" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/layout/fragment_courses_stagged.xml" value="0.25" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/layout/fragment_home_courses.xml" value="0.30434782608695654" />
+        <entry key="..\:/GIThub/AndroidEducationApp/app/src/main/res/layout/fragment_matches_courses.xml" value="0.12487335359675786" />
+      </map>
+    </option>
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />
     <option name="myNullables">
       <value>
-        <list size="12">
+        <list size="13">
           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
           <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
@@ -18,12 +32,13 @@
           <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
           <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
           <item index="11" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="12" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
         </list>
       </value>
     </option>
     <option name="myNotNulls">
       <value>
-        <list size="11">
+        <list size="12">
           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
           <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
@@ -35,6 +50,7 @@
           <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
           <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
           <item index="10" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
         </list>
       </value>
     </option>
@@ -44,5 +60,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -19,16 +19,19 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.appsnipp.education.R;
+import com.appsnipp.education.data.CourseCardsFake;
 import com.appsnipp.education.databinding.FragmentCoursesStaggedBinding;
-import com.appsnipp.education.ui.helpers.GridSpacingItemDecoration;
-import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
+import com.appsnipp.education.ui.listeners.ItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
+import com.appsnipp.education.ui.utils.MyUtilsApp;
+import com.appsnipp.education.ui.utils.helpers.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class CoursesStaggedFragment extends Fragment
-        implements CoursesItemClickListener {
+        implements ItemClickListener<CourseCard> {
 
     FragmentCoursesStaggedBinding binding;
     private Context mcontext;
@@ -90,15 +93,9 @@ public class CoursesStaggedFragment extends Fragment
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.horizontal_card);
         binding.rvCourses.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true, 0));
 
-        ArrayList<CourseCard> courseCards = new ArrayList<>();
+        List<CourseCard> courseCards = new ArrayList<>();
 
-        courseCards.add(new CourseCard(1, R.drawable.course_design_thinking, "Desing Thinking", "19 courses"));
-        courseCards.add(new CourseCard(2, R.drawable.course_design_coding, "Software Development", "14 courses"));
-        courseCards.add(new CourseCard(3, R.drawable.course_design_marketing, "Marketing", "24 courses"));
-        courseCards.add(new CourseCard(4, R.drawable.course_design_securityexpert, "Security Expert", "18 courses"));
-        courseCards.add(new CourseCard(5, R.drawable.course_design_whatisthisshit, "Locations", "21 courses"));
-        courseCards.add(new CourseCard(6, R.drawable.course_coding, "Big Data", "10 courses"));
-
+        courseCards = CourseCardsFake.getInstance().getSearchCoursesCards();
         CourseRecyclerAdapter adapter = new CourseRecyclerAdapter(mcontext, courseCards, this);
 
 //        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.card_margin);
@@ -115,8 +112,15 @@ public class CoursesStaggedFragment extends Fragment
         //...perform search
     }
 
+//    @Override
+//    public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
+//        Toast.makeText(mcontext, courseCard.getCourseTitle(), Toast.LENGTH_LONG).show();
+//    }
+
     @Override
-    public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
-        Toast.makeText(mcontext, courseCard.getCourseTitle(), Toast.LENGTH_LONG).show();
+    public void onItemClick(CourseCard item, ImageView imageView) {
+        String quantityCourseMessage = item.getQuantityCourses() + " courses";
+        MyUtilsApp.showToast(requireContext(), quantityCourseMessage);
+
     }
 }

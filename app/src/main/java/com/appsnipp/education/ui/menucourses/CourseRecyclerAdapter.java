@@ -13,50 +13,71 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.appsnipp.education.R;
 import com.appsnipp.education.databinding.ItemCardBinding;
-import com.appsnipp.education.ui.listeners.CoursesItemClickListener;
+import com.appsnipp.education.ui.base.BaseViewHolder;
+import com.appsnipp.education.ui.listeners.ItemClickListener;
 import com.appsnipp.education.ui.model.CourseCard;
 
 import java.util.List;
 
-public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAdapter.ViewHolder> {
+public class CourseRecyclerAdapter extends
+        RecyclerView.Adapter<BaseViewHolder<CourseCard>> {
 
     Context mContext;
     private final List<CourseCard> mData;
-    private final CoursesItemClickListener coursesItemClickListener;
+    private final ItemClickListener<CourseCard> itemClickListener;
 
-    public CourseRecyclerAdapter(Context mContext, List<CourseCard> mData, CoursesItemClickListener listener) {
+    public CourseRecyclerAdapter(Context mContext, List<CourseCard> mData, ItemClickListener<CourseCard> listener) {
         this.mContext = mContext;
         this.mData = mData;
-        this.coursesItemClickListener = listener;
+        this.itemClickListener = listener;
     }
+
+//    @NonNull
+//    @Override
+//    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+//
+//        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
+//        ItemCardBinding itemCardBinding = ItemCardBinding.inflate(layoutInflater, viewGroup, false);
+//        return new ViewHolder(itemCardBinding);
+//    }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-
+    public BaseViewHolder<CourseCard> onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
         ItemCardBinding itemCardBinding = ItemCardBinding.inflate(layoutInflater, viewGroup, false);
         return new ViewHolder(itemCardBinding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int position) {
-//        viewHolder.mItem = mData.get(position);
-        final int pos = viewHolder.getAdapterPosition();
-        //Set ViewTag
-        viewHolder.itemView.setTag(pos);
-
-        viewHolder.setBind(mData.get(position));
-
-        //2nd intent card only bottom margin in xml  and only top margin in adapter- it works
-
-        viewHolder.itemView.setOnClickListener(v -> coursesItemClickListener.onDashboardCourseClick(mData.get(position), viewHolder.itemCardBinding.cardViewImage));
+    public void onBindViewHolder(@NonNull BaseViewHolder<CourseCard> holder, int position) {
+        CourseCard item = mData.get(position);
+        holder.bind(item);
+        holder.itemView.setOnClickListener(v -> {
+            ViewHolder viewHolder = (ViewHolder) holder;
+            itemClickListener.onItemClick(item, viewHolder.getItemCardBinding().cardViewImage);
+        });
     }
+
+//    @Override
+//    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int position) {
+////        viewHolder.mItem = mData.get(position);
+//        final int pos = viewHolder.getAdapterPosition();
+//        //Set ViewTag
+//        viewHolder.itemView.setTag(pos);
+//
+//        viewHolder.bind(mData.get(position));
+//
+//        //2nd intent card only bottom margin in xml  and only top margin in adapter- it works
+//
+//        viewHolder.itemView.setOnClickListener(v -> {
+//            itemClickListener.onItemClick(mData.get(position), viewHolder.itemCardBinding.cardViewImage);
+//        });
+//    }
 
     public int getDimensionValuePixels(int dimension) {
         return (int) mContext.getResources().getDimension(dimension);
     }
-
 
 
     @Override
@@ -80,25 +101,25 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
         return mData.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends BaseViewHolder<CourseCard> {
 
         ItemCardBinding itemCardBinding;
 
         public ViewHolder(@NonNull ItemCardBinding cardBinding) {
             super(cardBinding.getRoot());
             this.itemCardBinding = cardBinding;
-
-            //this.itemRecyclerMealBinding.
         }
 
-        void setBind(CourseCard courseCard) {
+        public ItemCardBinding getItemCardBinding() {
+            return itemCardBinding;
+        }
 
-            this.itemCardBinding.cardViewImage.setImageResource(courseCard.getImageCourse());
-
-            this.itemCardBinding.stagItemCourse.setText(courseCard.getCourseTitle());
-            this.itemCardBinding.stagItemQuantityCourse.setText(courseCard.getQuantityCourses());
+        @Override
+        public void bind(CourseCard item) {
+            this.itemCardBinding.cardViewImage.setImageResource(item.getImageCourse());
+            this.itemCardBinding.stagItemCourse.setText(item.getCourseTitle());
+            this.itemCardBinding.stagItemQuantityCourse.setText(item.getQuantityCourses());
             this.itemCardBinding.cardViewImage.setBackgroundColor(itemView.getContext().getResources().getColor(R.color.color1));
         }
-
     }
 }

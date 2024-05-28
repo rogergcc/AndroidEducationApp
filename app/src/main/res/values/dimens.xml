@@ -9,9 +9,9 @@
 
 
     <dimen name="headerTextSize">25sp</dimen>
-    <dimen name="headerMoreTextSize">16sp</dimen>
+    <dimen name="headerMoreTextSize">14sp</dimen>
     <dimen name="card_margin">5dp</dimen>
-    <dimen name="frutorial_title">15sp</dimen>
+    <dimen name="text_title_15">15sp</dimen>
     <dimen name="card_maincourse_elevation">2dp</dimen>
     <dimen name="card_image_elevation">4dp</dimen>
     <dimen name="card_itemcourse_elevation">2dp</dimen>

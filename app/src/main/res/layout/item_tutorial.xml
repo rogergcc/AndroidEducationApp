@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvParentTutorial"
+    style="@style/CardViewStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardBackgroundColor="@color/bottomNavigationBackground"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/youtubeThumbnail"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/frutorials" />
+
+        <TextView
+            style="@style/viewParent.SubtitleText"
+            android:id="@+id/txtTitleTutorial"
+            android:layout_below="@id/youtubeThumbnail"
+            android:layout_margin="5dp"
+            android:text="@string/title_tutorials" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/imvTutorialPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/play_item_layer" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
