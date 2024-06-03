@@ -26,7 +26,6 @@ import com.appsnipp.education.ui.model.CourseCard;
 import com.appsnipp.education.ui.utils.MyUtilsApp;
 import com.appsnipp.education.ui.utils.helpers.GridSpacingItemDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -93,7 +92,7 @@ public class CoursesStaggedFragment extends Fragment
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.horizontal_card);
         binding.rvCourses.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true, 0));
 
-        List<CourseCard> courseCards = new ArrayList<>();
+        List<CourseCard> courseCards;
 
         courseCards = CourseCardsFake.getInstance().getSearchCoursesCards();
         CourseRecyclerAdapter adapter = new CourseRecyclerAdapter(mcontext, courseCards, this);

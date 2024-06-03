@@ -56,9 +56,8 @@ public class MatchesCoursesFragment extends Fragment
                              Bundle savedInstanceState) {
         binding = FragmentMatchesCoursesBinding.inflate(getLayoutInflater());
         mcontext = this.getContext();
-        View view = binding.getRoot();
 
-        return view;
+        return binding.getRoot();
     }
 
     @Override

@@ -19,7 +19,6 @@ import com.appsnipp.education.databinding.FragmentHomeCoursesBinding;
 import com.appsnipp.education.ui.model.CourseCard;
 import com.appsnipp.education.ui.utils.MyUtilsApp;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeCoursesFragment extends Fragment
@@ -51,7 +50,7 @@ public class HomeCoursesFragment extends Fragment
         PopularCoursesAdapter popularCoursesAdapter = new PopularCoursesAdapter(this);
         binding.rvPopularCourses.setAdapter(popularCoursesAdapter);
 
-        List<CourseCard> courseCardsList = new ArrayList<>();
+        List<CourseCard> courseCardsList;
         courseCardsList = CourseCardsFake.getInstance().getCourseCards();
 
         popularCoursesAdapter.setListDataItems(courseCardsList);
