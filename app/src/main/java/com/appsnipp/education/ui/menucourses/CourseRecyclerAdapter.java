@@ -22,7 +22,7 @@ import java.util.List;
 public class CourseRecyclerAdapter extends
         RecyclerView.Adapter<BaseViewHolder<CourseCard>> {
 
-    Context mContext;
+    final Context mContext;
     private final List<CourseCard> mData;
     private final ItemClickListener<CourseCard> itemClickListener;
 

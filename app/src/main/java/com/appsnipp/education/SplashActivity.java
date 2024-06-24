@@ -22,13 +22,10 @@ public class SplashActivity extends AppCompatActivity {
         //region REGION alternative design xml
 
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Write whatever to want to do after delay specified (1 sec)
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
-            }
+        handler.postDelayed(() -> {
+            //Write whatever to want to do after delay specified (1 sec)
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            finish();
         }, 1100);
 
         //endregion
