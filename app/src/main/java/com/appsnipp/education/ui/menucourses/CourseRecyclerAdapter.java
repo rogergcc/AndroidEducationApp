@@ -32,14 +32,6 @@ public class CourseRecyclerAdapter extends
         this.itemClickListener = listener;
     }
 
-//    @NonNull
-//    @Override
-//    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-//
-//        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-//        ItemCardBinding itemCardBinding = ItemCardBinding.inflate(layoutInflater, viewGroup, false);
-//        return new ViewHolder(itemCardBinding);
-//    }
 
     @NonNull
     @Override
@@ -59,25 +51,6 @@ public class CourseRecyclerAdapter extends
         });
     }
 
-//    @Override
-//    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int position) {
-////        viewHolder.mItem = mData.get(position);
-//        final int pos = viewHolder.getAdapterPosition();
-//        //Set ViewTag
-//        viewHolder.itemView.setTag(pos);
-//
-//        viewHolder.bind(mData.get(position));
-//
-//        //2nd intent card only bottom margin in xml  and only top margin in adapter- it works
-//
-//        viewHolder.itemView.setOnClickListener(v -> {
-//            itemClickListener.onItemClick(mData.get(position), viewHolder.itemCardBinding.cardViewImage);
-//        });
-//    }
-
-    public int getDimensionValuePixels(int dimension) {
-        return (int) mContext.getResources().getDimension(dimension);
-    }
 
 
     @Override

@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity
     DarkModePrefManager darkModePrefManager;
     ActivityMainBinding binding;
     NavHostFragment navHostFragment;
-    private BottomNavigationView bottomNavigationView;
 
 
     @Override
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity
         layoutParams.setBehavior(new BottomNavigationBehavior());
 
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         if (navHostFragment != null) {
             NavigationUI.setupWithNavController(bottomNavigationView, navHostFragment.getNavController());
         }

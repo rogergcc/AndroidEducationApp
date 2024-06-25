@@ -26,11 +26,6 @@ public class CourseTopicsViewPager
     private final List<MatchCourse> mCoursesList;
     private final ItemClickListener<MatchCourse> matchCourseClickListener;
 
-    //    public CourseTopicsViewPager(List<MatchCourse> mCoursesList, Context context, MatchCourseClickListener listener) {
-//        LayoutInflater mInflater = LayoutInflater.from(context);
-//        this.mCoursesList = mCoursesList;
-//        this.matchCourseClickListener = listener;
-//    }
     public CourseTopicsViewPager(List<MatchCourse> mCoursesList, Context context, ItemClickListener<MatchCourse> listener) {
         this.mCoursesList = mCoursesList;
         this.matchCourseClickListener = listener;
