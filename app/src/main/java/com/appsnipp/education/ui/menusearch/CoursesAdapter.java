@@ -17,10 +17,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-/**
- * Created on diciembre.
- * year 2023 .
- */
 public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHolder> {
 
     private static ClickListener mClickListener;
@@ -81,7 +77,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
 //                    .apply(new RequestOptions().centerCrop())
 //                    .into(binding.ivPlayCourse);
             binding.tvTitleCourse.setText(data.getCourseTitle());
-            binding.tvDetailsCourse.setText(data.getUrlCourse());
+            binding.tvDetailsCourse.setText(data.getQuantityCourses());
             binding.getRoot()
                     .setOnClickListener(
                             v -> mClickListener.onClick(data, getLayoutPosition()));

@@ -4,7 +4,6 @@
 
 package com.appsnipp.education.ui.menusearch;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -23,12 +22,16 @@ import java.util.List;
 
 public class CourseTopicsViewPager
         extends RecyclerView.Adapter<BaseViewHolder<MatchCourse>> {
-    private final List<MatchCourse> mCoursesList;
+    private List<MatchCourse> mCoursesList;
     private final ItemClickListener<MatchCourse> matchCourseClickListener;
 
-    public CourseTopicsViewPager(List<MatchCourse> mCoursesList, Context context, ItemClickListener<MatchCourse> listener) {
-        this.mCoursesList = mCoursesList;
+    public CourseTopicsViewPager(ItemClickListener<MatchCourse> listener) {
         this.matchCourseClickListener = listener;
+    }
+
+    public void setListDataItems(List<MatchCourse> listItems) {
+        this.mCoursesList = listItems;
+        notifyDataSetChanged();
     }
 
     @NonNull
