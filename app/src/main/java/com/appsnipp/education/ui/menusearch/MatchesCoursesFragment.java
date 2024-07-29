@@ -17,12 +17,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.appsnipp.education.R;
+import com.appsnipp.education.data.CourseCardsFake;
 import com.appsnipp.education.data.CoursesRepository;
 import com.appsnipp.education.databinding.FragmentMatchesCoursesBinding;
 import com.appsnipp.education.ui.listeners.ItemClickListener;
+import com.appsnipp.education.ui.model.CourseCard;
 import com.appsnipp.education.ui.model.MatchCourse;
 import com.appsnipp.education.ui.utils.AppLogger;
 import com.appsnipp.education.ui.utils.MyUtilsApp;
@@ -32,8 +35,7 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class MatchesCoursesFragment extends Fragment
-        implements
+public class MatchesCoursesFragment extends Fragment implements
         ItemClickListener<MatchCourse> {
 
     private static final String TAG = "MatchesCoursesFragment";
@@ -66,7 +68,7 @@ public class MatchesCoursesFragment extends Fragment
 
 
         CoursesViewModel viewModel = new ViewModelProvider(this,
-                new MyCoursesViewModelFactory(
+                new CoursesViewModel.MyCoursesViewModelFactory(
                         new CoursesRepository())).get(CoursesViewModel.class);
 
         viewModel.fetchMatchedCourses();
@@ -75,6 +77,17 @@ public class MatchesCoursesFragment extends Fragment
             setupViewpager(1, matchCourses);
         });
 
+        binding.rvPopularCourses.hasFixedSize();
+        binding.rvPopularCourses.setLayoutManager(new LinearLayoutManager(mcontext, LinearLayoutManager.VERTICAL, false));
+
+        List<CourseCard> courseCards;
+
+        courseCards = CourseCardsFake.getInstance().getSearchCoursesCards();
+
+        CoursesAdapter popularCoursesAdapter = new CoursesAdapter((view1, position) ->
+                MyUtilsApp.showToast(requireContext(), view1.getCourseTitle()));
+        binding.rvPopularCourses.setAdapter(popularCoursesAdapter);
+        popularCoursesAdapter.setListDataItems(courseCards);
     }
 
     private void setupAdapter(int currentItem, List<MatchCourse> matchCourseList) {
@@ -163,4 +176,12 @@ public class MatchesCoursesFragment extends Fragment
 //        intentGetStarted = new Intent(mcontext, YourActivity.class);
 //        startActivity(intentGetStarted);
     }
+
+//    @Override
+//    public void onItemClick(CourseCard item, ImageView imageView) {
+//        AppLogger.d("[" + TAG + "] onScrollPagerItemClick() " + item);
+//        MyUtilsApp.showToast(requireContext(), item.getCourseTitle());
+//        //Now, this has dynamic data from myMatchesCourses.getData();.
+//        //Could use the Id as unique value for go to new activity
+//    }
 }

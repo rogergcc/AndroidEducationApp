@@ -38,22 +38,22 @@ public class CoursesViewModel extends ViewModel {
         mMatchedCourses.postValue(data);
     }
 
+    static class MyCoursesViewModelFactory implements ViewModelProvider.Factory {
+        private final CoursesRepository repository;
 
-}
-
-class MyCoursesViewModelFactory implements ViewModelProvider.Factory {
-    private final CoursesRepository repository;
-
-    public MyCoursesViewModelFactory(CoursesRepository repository) {
-        this.repository = repository;
-    }
-
-    @NonNull
-    @Override
-    public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        if (modelClass.isAssignableFrom(CoursesViewModel.class)) {
-            return (T) new CoursesViewModel(repository);
+        public MyCoursesViewModelFactory(CoursesRepository repository) {
+            this.repository = repository;
         }
-        throw new IllegalArgumentException("Unknown ViewModel class");
+
+        @NonNull
+        @Override
+        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+            if (modelClass.isAssignableFrom(CoursesViewModel.class)) {
+                return (T) new CoursesViewModel(repository);
+            }
+            throw new IllegalArgumentException("Unknown ViewModel class");
+        }
     }
+
 }
+
