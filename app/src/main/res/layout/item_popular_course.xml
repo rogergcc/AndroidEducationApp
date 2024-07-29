@@ -9,6 +9,9 @@
     android:orientation="horizontal">
 
     <ImageView
+        android:id="@+id/ivPlayCourse"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
         android:background="@drawable/play_course"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/top_text_subtitle_card"
@@ -25,6 +28,7 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/tvTitleCourse"
             style="@style/viewParent.headerText"
             android:fontFamily="@font/bariol_regular"
             android:textSize="20sp"
@@ -33,6 +37,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/tvDetailsCourse"
             android:fontFamily="@font/bariol_regular"
             android:textColor="@color/bottomNavigationTextColor"
             android:text="@string/course_details"

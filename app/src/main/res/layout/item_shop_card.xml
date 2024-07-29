@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2020. rogergcc
   -->
-
 <!--    app:cardPreventCornerOverlap="true"-->
 <!--    app:cardUseCompatPadding="true"-->
 <androidx.cardview.widget.CardView
