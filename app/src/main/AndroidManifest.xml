@@ -21,7 +21,6 @@
             android:name=".SplashActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashThemeCorrect"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

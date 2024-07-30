@@ -19,12 +19,6 @@ public class CourseCard {
         this.quantityCourses = quantityCourses;
         this.imageResource = imageResource;
     }
-//    public CourseCard(int id, String title, String quantityCourses, int imageResource) {
-//        this.id = id;
-//        this.title = title;
-//        this.quantityCourses = quantityCourses;
-//        this.imageResource = imageResource;
-//    }
 
     public int getId() {
         return id;

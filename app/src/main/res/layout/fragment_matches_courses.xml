@@ -57,7 +57,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/view_pager"
+                android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/normalPadding"
@@ -67,6 +67,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
             <LinearLayout
                 android:id="@+id/linearLPopular"
                 android:layout_width="0dp"
@@ -77,7 +78,7 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_pager">
+                app:layout_constraintTop_toBottomOf="@+id/viewPager">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -103,16 +104,23 @@
                         android:text="@string/more" />
                 </LinearLayout>
 
-                <include layout="@layout/item_popular_course_playing" />
+                <!--                <include layout="@layout/item_popular_course_playing" />-->
 
-                <include layout="@layout/item_popular_course" />
+                <!--                <include layout="@layout/item_popular_course" />-->
 
-                <include layout="@layout/item_popular_course" />
+                <!--                <include layout="@layout/item_popular_course" />-->
 
-                <include layout="@layout/item_popular_course" />
+                <!--                <include layout="@layout/item_popular_course" />-->
 
-                <include layout="@layout/item_popular_course" />
+                <!--                <include layout="@layout/item_popular_course" />-->
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPopularCourses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_popular_course" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

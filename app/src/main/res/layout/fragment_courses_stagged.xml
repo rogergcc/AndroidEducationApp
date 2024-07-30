@@ -65,7 +65,7 @@
                 android:background="@drawable/container_search"
                 android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"
 
-                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:drawableStart="@drawable/search_icon"
                 android:drawablePadding="@dimen/drawable_left"
 
                 android:fontFamily="@font/bariol_regular"
@@ -77,11 +77,8 @@
 
                 android:inputType="text"
                 android:maxLines="1"
-                android:paddingLeft="@dimen/normalPadding"
-                android:paddingTop="@dimen/vertical_search"
-                android:paddingRight="@dimen/normalPadding"
-
-                android:paddingBottom="@dimen/vertical_search"
+                android:paddingHorizontal="@dimen/normalPadding"
+                android:paddingVertical="@dimen/top_text_card"
                 android:singleLine="true"
                 android:textColor="?attr/colorPrimaryDark"
 

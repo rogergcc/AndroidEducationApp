@@ -5,6 +5,8 @@
 package com.appsnipp.education.ui.model;
 
 
+import androidx.annotation.NonNull;
+
 public class MatchCourse {
 
     private final int id;
@@ -19,6 +21,7 @@ public class MatchCourse {
         this.imageResource = imageResource;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "MatchCourse{" +

@@ -9,17 +9,17 @@
 
     <item
         android:id="@+id/coursesStaggedFragment"
-        android:icon="@drawable/ic_effort"
+        android:icon="@drawable/courses_twotones_icon"
         android:title="@string/title_courses" />
 
     <item
         android:id="@+id/homeCoursesFragment"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/home_twotones_icon"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/matchesCoursesFragment"
-        android:icon="@drawable/ic_search_black_24dp"
+        android:icon="@drawable/search_twotones_icon"
         android:title="@string/title_search" />
 
     <item

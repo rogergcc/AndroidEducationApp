@@ -11,18 +11,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.appsnipp.education.R;
+import com.appsnipp.education.data.CourseCardsFake;
 import com.appsnipp.education.data.CoursesRepository;
 import com.appsnipp.education.databinding.FragmentMatchesCoursesBinding;
-import com.appsnipp.education.ui.listeners.ItemClickListener;
+import com.appsnipp.education.ui.model.CourseCard;
 import com.appsnipp.education.ui.model.MatchCourse;
 import com.appsnipp.education.ui.utils.AppLogger;
 import com.appsnipp.education.ui.utils.MyUtilsApp;
@@ -32,13 +33,14 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class MatchesCoursesFragment extends Fragment
-        implements
-        ItemClickListener<MatchCourse> {
+public class MatchesCoursesFragment extends Fragment {
 
     private static final String TAG = "MatchesCoursesFragment";
     FragmentMatchesCoursesBinding binding;
     Context mcontext;
+    private CoursesAdapter popularCoursesAdapter;
+    private CourseTopicsViewPager courseTopicsViewPager;
+    private CoursesViewModel viewModel;
 
 
     public MatchesCoursesFragment() {
@@ -56,30 +58,53 @@ public class MatchesCoursesFragment extends Fragment
                              Bundle savedInstanceState) {
         binding = FragmentMatchesCoursesBinding.inflate(getLayoutInflater());
         mcontext = this.getContext();
-        View view = binding.getRoot();
 
-        return view;
+        return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-        CoursesViewModel viewModel = new ViewModelProvider(this,
-                new MyCoursesViewModelFactory(
-                        new CoursesRepository())).get(CoursesViewModel.class);
+        setUpAdapters();
+        viewModel = new ViewModelProvider(this, new CoursesViewModel.MyCoursesViewModelFactory(
+                new CoursesRepository())).get(CoursesViewModel.class);
 
         viewModel.fetchMatchedCourses();
 
         viewModel.matchedCourses().observe(getViewLifecycleOwner(), matchCourses -> {
+            courseTopicsViewPager.setListDataItems(matchCourses);
             setupViewpager(1, matchCourses);
+        });
+
+        binding.rvPopularCourses.hasFixedSize();
+        binding.rvPopularCourses.setLayoutManager(new LinearLayoutManager(mcontext, LinearLayoutManager.VERTICAL, false));
+
+        List<CourseCard> courseCards;
+
+        courseCards = CourseCardsFake.getInstance().getSearchCoursesCards();
+
+
+        binding.rvPopularCourses.setAdapter(popularCoursesAdapter);
+        popularCoursesAdapter.setListDataItems(courseCards);
+    }
+
+    private void setUpAdapters() {
+        //Popular Courses
+        popularCoursesAdapter = new CoursesAdapter((view1, position) -> {
+            AppLogger.d("[" + TAG + "] lambda CLick CoursesAdapter " + view1.getCourseTitle());
+        });
+
+
+        //Matched Courses
+        courseTopicsViewPager = new CourseTopicsViewPager((item, imageView) -> {
+            AppLogger.d("[" + TAG + "] lambda CLick CourseTopicsViewPager () " + item);
         });
 
     }
 
-    private void setupAdapter(int currentItem, List<MatchCourse> matchCourseList) {
-        CourseTopicsViewPager courseTopicsViewPager = new CourseTopicsViewPager(matchCourseList, mcontext, this);
+    private void setupAdapter(int currentItem) {
+
         binding.viewPager.setAdapter(courseTopicsViewPager);
         // set selected item
         binding.viewPager.setCurrentItem(currentItem);
@@ -143,9 +168,7 @@ public class MatchesCoursesFragment extends Fragment
     }
 
     private void setupViewpager(int currentItem, List<MatchCourse> matchCourseList) {
-        setupAdapter(currentItem, matchCourseList);
-
-
+        setupAdapter(currentItem);
         setupPageTransformer();
         setupItemDecoration();
         setupPageChangeCallback(matchCourseList);
@@ -154,14 +177,22 @@ public class MatchesCoursesFragment extends Fragment
     }
 
 
-    @Override
-    public void onItemClick(MatchCourse item, ImageView imageView) {
-        AppLogger.d("[" + TAG + "] onScrollPagerItemClick() " + item);
-        MyUtilsApp.showToast(requireContext(), item.getNumberOfCourses());
-        //Now, this has dynamic data from myMatchesCourses.getData();.
-        //Could use the Id as unique value for go to new activity
-//        Intent intentGetStarted;
-//        intentGetStarted = new Intent(mcontext, YourActivity.class);
-//        startActivity(intentGetStarted);
-    }
+//    @Override
+//    public void onItemClick(MatchCourse item, ImageView imageView) {
+//        AppLogger.d("[" + TAG + "] Interface CLick onScrollPagerItemClick() " + item);
+////        MyUtilsApp.showToast(requireContext()," Interface CLick "+ item.getNumberOfCourses());
+//        //Now, this has dynamic data from myMatchesCourses.getData();.
+//        //Could use the Id as unique value for go to new activity
+////        Intent intentGetStarted;
+////        intentGetStarted = new Intent(mcontext, YourActivity.class);
+////        startActivity(intentGetStarted);
+//    }
+
+//    @Override
+//    public void onItemClick(CourseCard item, ImageView imageView) {
+//        AppLogger.d("[" + TAG + "] onScrollPagerItemClick() " + item);
+//        MyUtilsApp.showToast(requireContext(), item.getCourseTitle());
+//        //Now, this has dynamic data from myMatchesCourses.getData();.
+//        //Could use the Id as unique value for go to new activity
+//    }
 }

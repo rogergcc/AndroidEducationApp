@@ -26,7 +26,6 @@ import com.appsnipp.education.ui.model.CourseCard;
 import com.appsnipp.education.ui.utils.MyUtilsApp;
 import com.appsnipp.education.ui.utils.helpers.GridSpacingItemDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -49,8 +48,6 @@ public class CoursesStaggedFragment extends Fragment
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_courses_stagged, container, false);
 
         binding = FragmentCoursesStaggedBinding.inflate(getLayoutInflater());
         mcontext = this.getContext();
@@ -82,24 +79,14 @@ public class CoursesStaggedFragment extends Fragment
         binding.rvCourses.setClipToPadding(false);
         binding.rvCourses.setHasFixedSize(true);
 
-//        binding.rvCourses.addItemDecoration(
-//                new HorizontalMarginItemDecoration(
-//                        mcontext,
-//                        R.dimen.top_text_subtitle_card,
-//                        R.dimen.top_text_subtitle_card
-//                )
-//        );
-
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.horizontal_card);
         binding.rvCourses.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true, 0));
 
-        List<CourseCard> courseCards = new ArrayList<>();
+        List<CourseCard> courseCards;
 
         courseCards = CourseCardsFake.getInstance().getSearchCoursesCards();
         CourseRecyclerAdapter adapter = new CourseRecyclerAdapter(mcontext, courseCards, this);
 
-//        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.card_margin);
-//        binding.rvCourses.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
 
         binding.rvCourses.setAdapter(adapter);
         return view;
@@ -111,11 +98,6 @@ public class CoursesStaggedFragment extends Fragment
         in.hideSoftInputFromWindow(binding.edtSearch.getWindowToken(), 0);
         //...perform search
     }
-
-//    @Override
-//    public void onDashboardCourseClick(CourseCard courseCard, ImageView imageView) {
-//        Toast.makeText(mcontext, courseCard.getCourseTitle(), Toast.LENGTH_LONG).show();
-//    }
 
     @Override
     public void onItemClick(CourseCard item, ImageView imageView) {

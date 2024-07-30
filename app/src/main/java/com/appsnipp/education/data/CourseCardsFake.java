@@ -39,11 +39,11 @@ public class CourseCardsFake {
 
     public List<CourseCard> getSearchCoursesCards() {
         return Arrays.asList(
-                new CourseCard(1, "Desing Thinking IX", "19 courses", R.drawable.course_design_thinking),
-                new CourseCard(2, "Software Development", "14 courses", R.drawable.course_design_coding),
+                new CourseCard(1, "Design Thinking", "19 courses", R.drawable.course_design_thinking),
+                new CourseCard(2, "App Development", "14 courses", R.drawable.course_design_coding),
                 new CourseCard(3, "Marketing", "24 courses", R.drawable.course_design_marketing),
                 new CourseCard(4, "Security Expert", "18 courses", R.drawable.course_design_securityexpert),
-                new CourseCard(5, "Locations", "21 courses", R.drawable.course_design_whatisthisshit),
+                new CourseCard(5, "Pentest App Android", "21 courses", R.drawable.course_design_whatisthisshit),
                 new CourseCard(6, "Big Data", "10 courses", R.drawable.course_coding)
         );
     }
