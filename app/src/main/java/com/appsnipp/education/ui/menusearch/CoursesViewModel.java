@@ -49,7 +49,7 @@ public class CoursesViewModel extends ViewModel {
         @Override
         public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
             if (modelClass.isAssignableFrom(CoursesViewModel.class)) {
-                return (T) new CoursesViewModel(repository);
+                return modelClass.cast(new CoursesViewModel(repository));
             }
             throw new IllegalArgumentException("Unknown ViewModel class");
         }
